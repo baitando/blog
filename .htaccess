@@ -1,0 +1,40 @@
+# turn off directory browsing
+IndexIgnore *
+
+# show custom error pages for these HTTP statuses
+#ErrorDocument 404 /error/404.html
+#ErrorDocument 403 /error/403.html
+#ErrorDocument 401 /error/403.html
+
+# start rewrite rules
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Omit extension
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# pass through requests when the page exists
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.*)$ - [L]
+
+# renamed a file, point to new location
+#RewriteRule ^2016/01/talk-roundup-three-for-neo4j.html$ /2016/01/talk-roundup-four-for-neo4j.html [R=301,L]
+
+# static pages
+RewriteRule ^about/?$ /about.html [R=301,L]
+RewriteRule ^contact/?$ /contact.html [R=301,L]
+RewriteRule feed/?$ /feed.xml [R=301,L]
+
+# pass anything ending in HTML - prevents infinite redirect if the wildcard formulas below are incorrect
+RewriteRule ^(.*).html$ - [L]
+
+# Blog posts start with year, ^20___ .
+# match a trailing slash, but omit it from the destination
+RewriteRule ^20(.*)\/$ /20$1.html [R=301,L]
+# tack html onto anything else
+RewriteRule ^20(.*)$ /20$1.html [R=301,L]
+
+# end rewrite rules
+</IfModule>
