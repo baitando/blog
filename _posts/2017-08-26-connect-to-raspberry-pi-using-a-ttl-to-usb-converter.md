@@ -4,7 +4,7 @@ title:  "Connect to Raspberry Pi using a TTL to USB converter"
 category: IT
 tags: raspberry-pi
 comments: true
-excerpt: Using the debug console of a Raspberry Pi by using a TTL to USB converter is a helpful tool e.g. during setup or when analyzing network problems. This post shows how to setup the connection.
+excerpt: Using the debug console of a Raspberry Pi by using a TTL to USB converter is a helpful tool e.g. during setup. This post shows how to setup the connection.
 ---
 Normally I use a keyboard and a screen connected to a new Raspberry Pi for doing the initial setup. Once the network and SSH are up and running, I connect from remote to do the rest of the setup. 
 
@@ -20,7 +20,7 @@ First of all things need to be wired together, because my converter consists of 
 
 The USB part shows some labels for each pin. After reading some other posts ([this][wiring] one was helpful) I found out which pin of the Raspberry Pi fits to which one on the USB side. The image above shows the result. It worked although I'm not sure if I chose the right colors. But that's not that important if the right pins are connected to each other. 
 
-The table below is based on the image. For a better understanding of the pin numbering on the Raspberry Pi side you can have a look at [this][raspi-pins-1] description or the GPIO pin picture in [this][raspi-pins-2] tutorial. One important thing is to connect TXD (transmit data) with RXD  (receive data) and RXD with TXD, because those are the pins for sending (TXD) and receiving data (RXD). A sending pin needs to be connected to a receiving pin.
+The table below is based on the image. For a better understanding of the pin numbering on the Raspberry Pi side you can have a look at [this][raspi-pins-1] description or the GPIO pin picture in [this][raspi-pins-2] tutorial. One important thing is to connect TXD with RXD and RXD with TXD, because those are the pins for sending (TXD) and receiving data (RXD). A sending pin needs to be connected to a receiving pin.
 
 | Color  | Raspberry Pi | USB |
 | -------|--------------|-----|
