@@ -29,6 +29,8 @@ The table below is based on the image. For a better understanding of the pin num
 | Yellow | TXD (Pin 8)  | RXD |
 | Green  | RXD (Pin 10) | TXD |
 
+Please be careful. If you connect the 5V pin, you must not plug in the external power supply of the Raspberry Pi. It will get the power via the red cable.
+
 ## Access the debug console
 
 After the pins are connected, it's time to test the connection to the debug console. To do this, you need to plug in the USB part into your laptop. I used Windows 10 and didn't need to install any additional drivers - but this might be the case on other platforms.
