@@ -53,6 +53,18 @@ compress_html:
   comments:  ["<!-- ", " -->"]
   endings:   all
 
+# applies pretty for all
+permalink: pretty
+
+# overrides permalink for posts
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: /:year/:month/:day/:title
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
