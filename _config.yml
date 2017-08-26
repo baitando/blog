@@ -24,6 +24,9 @@ owner_name: Andreas Hirsch
 github_url: https://github.com/baitando
 google_analytics: UA-59768699-2
 
+sass:
+  style: compressed
+
 tag_page_data:
   sitemap: false
 tag_page_layout: tag_page
