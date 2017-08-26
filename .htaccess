@@ -1,3 +1,5 @@
+Options +MultiViews
+
 # turn off directory browsing
 IndexIgnore *
 
