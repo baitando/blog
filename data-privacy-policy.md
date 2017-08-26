@@ -8,7 +8,8 @@ Our website may be used without entering personal information. Different rules m
 
 Andreas Hirsch  
 Olnhauser Str. 12  
-70437 Stuttgart
+70437 Stuttgart   
+Germany
 
 Telephone: [+49 (0) 176 21990745](tel:017621990745)  
 E-Mail: [ando.hirsch@gmail.com](mailto:ando.hirsch@gmail.com)  
@@ -41,7 +42,11 @@ On our website we offer you the opportunity to contact us, either by email and/o
 
 ## Posting comments
 
-On our website we offer you the opportunity to post comments about individual articles. For this purpose, the IP address of the user/internet connection subscriber is stored. This information is stored for our security in the event the author through his/her comments infringes against third party rights and/or unlawful content is entered. Consequently, we have a direct interest in the author’s stored data, particularly since we may be potentially liable for such violations. No data is transferred to third parties. Nor is any of this information matched to any information that may be collected by other components of our website.
+On our website we offer you the opportunity to post comments about individual articles. The comment functionality “Disqus” is provided as a service from Big Head Labs, Inc., San Francisco, USA. Disqus is an interactive comment service that allows users to post comments on all websites that use the Disqus service with a single sign-on to the provider. Users can also sign-up and sign-in with existing accounts with Facebook (via Facebook Connect), Twitter, Yahoo, and OpenID. Posting comments is also possible without registration and sign-in (as “Guest”). More information about Disqus and its service can be found at [www.disqus.com](https://www.disqus.com).
+
+When posting comments, your data is processed and stored with that provider. You can access the provider’s Terms of Service and Privacy Policy at [https://docs.disqus.com/help/29/](https://docs.disqus.com/help/29/) and [https://docs.disqus.com/help/30/](https://docs.disqus.com/help/30/), respectively.
+If you sign-in to Disqus using your Facebook, Twitter, Yahoo or OpenID account, these providers may also collect, process, and store data. Please refer to the privacy policies of the respective provider for further information.
+We reserve the rights to delete inappropriate comments or spam.
 
 ## Use of Google Analytics with anonymization
 
@@ -55,10 +60,10 @@ Google will use this information to evaluate your usage of our site, to compile 
 
 Google states that it will in never associate your IP address with other data held by Google. You can prevent cookies from being installed by adjusting the settings on your browser software accordingly. You should be aware, however, that by doing so you may not be able to make full use of all the functions of our website.
 
-Google also offers a disabling option for the most common browsers, thus providing you with greater control over the data which is collected and processed by Google. If you enable this option, no information regarding your website visit is transmitted to Google Analytics. However, the activation does not prevent the transmission of information to us or to any other web analytics services we may use. For more information about the disabling option provided by Google, and how to enable this option, visit https://tools.google.com/dlpage/gaoptout?hl=en
+Google also offers a disabling option for the most common browsers, thus providing you with greater control over the data which is collected and processed by Google. If you enable this option, no information regarding your website visit is transmitted to Google Analytics. However, the activation does not prevent the transmission of information to us or to any other web analytics services we may use. For more information about the disabling option provided by Google, and how to enable this option, visit [https://tools.google.com/dlpage/gaoptout?hl=en](https://tools.google.com/dlpage/gaoptout?hl=en).
 
 ## Information/Cancellation/Deletion
 
 On the basis of the Federal Data Protection Act, you may contact us at no cost if you have questions relating to the collection, processing or use of your personal information, if you wish to request the correction, blocking or deletion of the same, or if you wish to cancel explicitly granted consent. Please note that you have the right to have incorrect data corrected or to have personal data deleted, where such claim is not barred by any legal obligation to retain this data.
 
-[Sample Data Privacy Policy Statement](https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html) provided by the [law offices of Weiß & Partner](https://www.ratgeberrecht.eu/)
+Based on the [Sample Data Privacy Policy Statement](https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html) provided by the [law offices of Weiß & Partner](https://www.ratgeberrecht.eu/)

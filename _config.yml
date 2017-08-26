@@ -43,6 +43,7 @@ show_drafts: false
 
 include: ['.htaccess']
 
+excerpt_separator: <!--more-->
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

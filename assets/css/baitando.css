@@ -3,3 +3,7 @@
     margin: 0 auto;
     display: block;
 }
+
+.main-content table {
+    display: table;
+}

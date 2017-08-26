@@ -10,13 +10,14 @@ permalink: legal-disclosure
 
 Andreas Hirsch  
 Olnhauser Str. 12  
-70437 Stuttgart
+70437 Stuttgart   
+Germany
 
 ## Contact
 
 Telephone: [+49 (0) 176 21990745](tel:017621990745)  
 E-Mail: [ando.hirsch@gmail.com](mailto:ando.hirsch@gmail.com)  
-Web address: [baitando.de](baitando.de)
+Web address: [www.baitando.de](www.baitando.de)
 
 ## Disclaimer
 
