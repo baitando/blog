@@ -16,7 +16,7 @@ This post shows only my personal experiences with the specific hardware I used. 
 
 First of all things need to be wired together, because my converter consists of the USB part offering some pins and five cables in different colors.
 
-![Cable connection on the Raspberry Pi side]({{ site.url }}/assets/raspi_board_usb_pins.jpg){: .center-image }
+![Cable connection on the Raspberry Pi side]({{ site.url }}/assets/raspi_board_usb_pins_small.jpg){: .center-image }
 
 The USB part shows some labels for each pin. After reading some other posts ([this][wiring] one was helpful) I found out which pin of the Raspberry Pi fits to which one on the USB side. The image above shows the result. It worked although I'm not sure if I chose the right colors. But that's not that important if the right pins are connected to each other. 
 
