@@ -8,7 +8,7 @@ excerpt: Using the debug console of a Raspberry Pi by using a TTL to USB convert
 ---
 Normally I use a keyboard and a screen connected to a new Raspberry Pi for doing the initial setup. Once the network and SSH are up and running, I connect from remote to do the rest of the setup. 
 
-As an alternative I tried to establish a connection between the Raspberry Pi and a laptop using a TTL to USB converter. Of course it works - but there are some things you need to know besides the general things described on [Wikipedia][wiki-uart]. The summary provided here might help others struggling with similar problems.
+As an alternative I tried to establish a connection between the Raspberry Pi (in this particular case a Raspberry Pi 3 Model B) and a laptop using a TTL to USB converter. Of course it works - but there are some things you need to know besides the general things described on [Wikipedia][wiki-uart]. The summary provided here might help others struggling with similar problems.
 
 This post shows only my personal experiences with the specific hardware I used. For this reason I cannot accept any responsibility or liability in case anything is damaged.
 
