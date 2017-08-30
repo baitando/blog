@@ -30,4 +30,4 @@ Responsibility for the content of external links (to web pages of third parties)
 ### Copyright
 Our web pages and their contents are subject to German copyright law. Unless expressly permitted by law (§ 44a et seq. of the copyright law), every form of utilizing, reproducing or processing works subject to copyright protection on our web pages requires the prior consent of the respective owner of the rights. Individual reproductions of a work are allowed only for private use, so must not serve either directly or indirectly for earnings. Unauthorized utilization of copyrighted works is punishable (§ 106 of the copyright law).
 
-Supported by:  [www.ms-concept.de](www.ms-concept.de)
+Supported by:  [https://www.ms-concept.de](https://www.ms-concept.de)
