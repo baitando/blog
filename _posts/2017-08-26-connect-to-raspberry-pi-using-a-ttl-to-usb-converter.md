@@ -4,7 +4,7 @@ title:  "Connect to Raspberry Pi using a TTL to USB converter"
 category: IT
 tags: raspberry-pi
 comments: true
-excerpt: Using the debug console of a Raspberry Pi by using a TTL to USB converter is a helpful tool e.g. during setup. This post shows how to setup the connection.
+excerpt: Connecting to a Raspberry Pi using a TTL to USB converter is a helpful tool e.g. during setup. This post shows how to setup the connection.
 ---
 Normally I use a keyboard and a screen connected to a new Raspberry Pi for doing the initial setup. Once the network and SSH are up and running, I connect from remote to do the rest of the setup. 
 
