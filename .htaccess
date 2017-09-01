@@ -24,6 +24,10 @@ RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{SERVER_PORT} 80
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+# Redirect if html file
+RewriteCond %{THE_REQUEST} ^(.*)\.html
+RewriteRule ^(.*)\.html$ $1 [R=301,L]
+
 # Handle directory
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteCond %{REQUEST_FILENAME}/index.html -f
@@ -31,6 +35,7 @@ RewriteRule ^([^\.]+)$ $1/index.html [NC,L]
 
 # Omit extension
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}/index.html -f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
 # pass through requests when the page exists
@@ -39,6 +44,10 @@ RewriteRule ^(.*)$ - [L]
 
 # renamed a file, point to new location
 #RewriteRule ^2016/01/talk-roundup-three-for-neo4j.html$ /2016/01/talk-roundup-four-for-neo4j.html [R=301,L]
+
+RewriteRule ^2017/08/26/connect-to-raspberry-pi-using-a-ttl-to-usb-converter.html$ /it/2017/08/26/connect-to-raspberry-pi-using-a-ttl-to-usb-converter [R=301,L]
+
+RewriteRule ^2017/08/26/connect-to-raspberry-pi-using-a-ttl-to-usb-converter$ /it/2017/08/26/connect-to-raspberry-pi-using-a-ttl-to-usb-converter [R=301,L]
 
 # static pages
 RewriteRule ^about/?$ /about.html [R=301,L]
@@ -50,9 +59,9 @@ RewriteRule ^(.*).html$ - [L]
 
 # Blog posts start with year, ^20___ .
 # match a trailing slash, but omit it from the destination
-RewriteRule ^20(.*)\/$ /20$1.html [R=301,L]
+RewriteRule ^it\/20(.*)\/$ /it/20$1.html [R=301,L]
 # tack html onto anything else
-RewriteRule ^20(.*)$ /20$1.html [R=301,L]
+RewriteRule ^it\//20(.*)$ /it/20$1.html [R=301,L]
 
 # end rewrite rules
 </IfModule>
