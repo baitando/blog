@@ -49,6 +49,8 @@ RewriteRule ^2017/08/26/connect-to-raspberry-pi-using-a-ttl-to-usb-converter.htm
 RewriteRule ^2017/08/26/connect-to-raspberry-pi-using-a-ttl-to-usb-converter$ /it/2017/08/26/connect-to-raspberry-pi-using-a-ttl-to-usb-converter [R=301,L]
 RewriteRule ^impressum$ /legal-disclosure [R=301,L]
 RewriteRule ^impressum/$ /legal-disclosure [R=301,L]
+RewriteRule ^datenschutz$ /privacy-statement [R=301,L]
+RewriteRule ^datenschutz/$/$ /privacy-statement [R=301,L]
 
 # static pages
 RewriteRule ^about/?$ /about.html [R=301,L]
