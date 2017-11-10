@@ -48,7 +48,6 @@ RewriteRule ^(.*)$ - [L]
 RewriteRule ^2017/08/26/connect-to-raspberry-pi-using-a-ttl-to-usb-converter.html$ /it/2017/08/26/connect-to-raspberry-pi-using-a-ttl-to-usb-converter [R=301,L]
 RewriteRule ^2017/08/26/connect-to-raspberry-pi-using-a-ttl-to-usb-converter$ /it/2017/08/26/connect-to-raspberry-pi-using-a-ttl-to-usb-converter [R=301,L]
 RewriteRule ^it/2017/11/04/set-up-mobile-access-to-openhab$ /it/2017/11/04/enable-remote-access-to-a-local-openhab-instance [R=301,L]
-https://www.baitando.de/
 RewriteRule ^impressum$ /legal-disclosure [R=301,L]
 RewriteRule ^impressum/$ /legal-disclosure [R=301,L]
 RewriteRule ^datenschutz$ /privacy-statement [R=301,L]
