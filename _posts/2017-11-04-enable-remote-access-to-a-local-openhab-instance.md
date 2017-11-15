@@ -11,7 +11,7 @@ The [openHAB Cloud][oh-cloud-gh] solution offers the possibility to make your [o
 
 It can be either hosted on your own server (for further information how to set up the system, please have a closer look at the [GitHub repository of openHAB Cloud][oh-cloud-gh]) or you can use the [public and freely accessible instance][my-oh-www] hosted by the [openHAB Foundation e.V.][oh-foundation] In this blog post I'll refer to the latter. It assumes, that you have already set up your openHAB instance and your devices.
 
-All file system paths mentioned here are valid for an APT based installation. This is e.g. the case, if your instance is hosted on Raspbian and you used the available installation package. The [documentation][oh-paths] provides an overview. The blog post generally refers to openHAB version 2.2. 
+All file system paths mentioned here are valid for an APT based installation. This is e.g. the case, if your instance is hosted on Raspbian and you used the available installation package. The [documentation][oh-paths] provides an overview. The blog post generally refers to openHAB version 2.1. 
 
 # Set up openHAB Cloud Connector
 
