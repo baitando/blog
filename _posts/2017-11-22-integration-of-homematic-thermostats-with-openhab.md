@@ -4,7 +4,7 @@ title:  "Integration of Homematic thermostats with openHAB"
 category: IT
 tags: smart-home openhab
 comments: true
-excerpt: My first smart home experience was setting up a Homematic gateway with some thermostats in my parents house. This post shows how to integrate such devices with openHAB.
+excerpt: My first smart home experience was setting up a Homematic gateway with some thermostats in my parents' house. This post shows how to integrate such devices with openHAB.
 ---
 
 One major strength of [openHAB][oh-homepage] is being able to integrate devices of different vendors using different technologies and communication protocols. This was my reason for switching to openHAB two years ago. Due to the fact, that my parents used a homogeneous Homematic environment with a gateway and some thermostats before, my first experience with openHAB was integrating those devices with the new openHAB smart home environment.
