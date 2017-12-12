@@ -2,7 +2,7 @@
 layout: post
 title:  "Set up Raspbian on Raspberry Pi"
 category: IT
-tags: raspberry-pi
+tags: raspberry-pi linux
 comments: true
 excerpt: Setting up Raspbian on a Raspberry Pi is well documented. This post shows some additional, hopefully helpful configuration steps.
 ---
