@@ -28,6 +28,9 @@ github:
   is_project_page: true
   repository_url: https://github.com/baitando/blog
 
+twitter:
+  username: baitando
+
 sass:
   style: compressed
 
