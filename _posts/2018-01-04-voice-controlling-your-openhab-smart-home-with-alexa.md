@@ -2,7 +2,7 @@
 layout: post
 title:  "Voice controlling your openHAB smart home with Alexa"
 category: IT
-tags: smart-home openhab
+tags: smart-home openhab alexa
 comments: true
 excerpt: Voice controlled home assistants become more and more popular. Let's have a look, how Amazon Alexa can be integrated with openHAB for voice controlling your smart home.
 ---
