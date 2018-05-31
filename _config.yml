@@ -22,7 +22,6 @@ url: "https://www.baitando.de" # the base hostname & protocol for your site, e.g
 
 owner_name: Andreas Hirsch
 github_url: https://github.com/baitando
-google_analytics: UA-59768699-2
 
 github:
   is_project_page: true
