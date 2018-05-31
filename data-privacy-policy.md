@@ -20,12 +20,12 @@ III. Information about the data processing
 
 The party responsible for this website (the "controller") for purposes of data protection law is:
 
-Andreas Hirsch \
-Olnhauser Str. 12 \
-70437 Stuttgart \
+Andreas Hirsch  
+Olnhauser Str. 12  
+70437 Stuttgart  
 Germany
 
-Telephone: [+49 (0) 176 21990745](tel:017621990745) \
+Telephone: [+49 (0) 176 21990745](tel:017621990745)  
 E-Mail: [ando.hirsch@gmail.com](mailto:ando.hirsch@gmail.com)  
 
 ## II. The rights of users and data subjects
