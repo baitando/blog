@@ -4,66 +4,91 @@ title: Data privacy policy
 permalink: /privacy-statement
 ---
 
-Our website may be used without entering personal information. Different rules may apply to certain services on our site, however, and are explained separately below. We collect personal information from you (e.g. name, address, email address, telephone number, etc.) in accordance with the provisions of German data protection statutes. Information is considered personal if it can be associated exclusively to a specific natural person. The legal framework for data protection may be found in the German Federal Data Protection Act (BDSG) and the Telemedia Act (TMG). The provisions below serve to provide information as to the manner, extent and purpose for collecting, using and processing personal information by the provider.
+Personal data (usually referred to just as "data" below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there.
 
-Andreas Hirsch  
-Olnhauser Str. 12  
-70437 Stuttgart   
+Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the "GDPR"), "processing" refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.
+
+The following privacy policy is intended to inform you in particular about the type, scope, purpose, duration, and legal basis for the processing of such data either under our own control or in conjunction with others. We also inform you below about the third-party components we use to optimize our website and improve the user experience which may result in said third parties also processing data they collect and control.
+
+Our privacy policy is structured as follows:
+
+I. Information about us as controllers of your data \
+II. The rights of users and data subjects \
+III. Information about the data processing
+
+## I. Information about us as controllers of your data
+
+The party responsible for this website (the "controller") for purposes of data protection law is:
+
+Andreas Hirsch \
+Olnhauser Str. 12 \
+70437 Stuttgart \
 Germany
 
-Telephone: [+49 (0) 176 21990745](tel:017621990745)  
+Telephone: [+49 (0) 176 21990745](tel:017621990745) \
 E-Mail: [ando.hirsch@gmail.com](mailto:ando.hirsch@gmail.com)  
 
-Please be aware that data transfer via the internet is subject to security risks and, therefore, complete protection against third-party access to transferred data cannot be ensured.
+## II. The rights of users and data subjects
 
-## Cookies
+With regard to the data processing to be described in more detail below, users and data subjects have the right
 
-Our website makes use of so-called cookies in order to recognize repeat use of our website by the same user/internet connection subscriber. Cookies are small text files that your internet browser downloads and stores on your computer. They are used to improve our website and services. In most cases these are so-called "session cookies" that are deleted once you leave our website.
+* to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR);
+* to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR);
+* to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR;
+* to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR);
+* to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR).
 
-To an extent, however, these cookies also pass along information used to automatically recognize you. Recognition occurs through an IP address saved to the cookies. The information thereby obtained is used to improve our services and to expedite your access to the website.
+In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.
 
-You can prevent cookies from being installed by adjusting the settings on your browser software accordingly. You should be aware, however, that by doing so you may not be able to make full use of all the functions of our website.
+**Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller's future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible.**
 
-## Server data
+## III. Information about the data processing
+Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.
 
-For technical reasons, data such as the following, which your internet browser transmits to us or to our web space provider (so called server log files), is collected: 
-- type and version of the browser you use 
-- operating system 
-- websites that linked you to our site (referrer URL) 
-- websites that you visit 
-- date and time of your visit 
-- your Internet Protocol (IP) address. 
+### Server data
+For technical reasons, the following data sent by your internet browser to us or to our server provider will be collected, especially to ensure a secure and stable website: These server log files record the type and version of your browser, operating system, the website from which you came (referrer URL), the webpages on our site visited, the date and time of your visit, as well as the IP address from which you visited our site.
 
-This anonymous data is stored separately from any personal information you may have provided, thereby making it impossible to connect it to any particular person. The data is used for statistical purposes in order to improve our website and services.
+The data thus collected will be temporarily stored, but not in association with any other of your data.
 
-## Contacting us
+The basis for this storage is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in the improvement, stability, functionality, and security of our website.
 
-On our website we offer you the opportunity to contact us, either by email and/or by using a contact form. In such event, information provided by the user is stored for the purpose of facilitating communications with the user. No data is transferred to third parties. Nor is any of this information matched to any information that may be collected by other components of our website.
+The data will be deleted within no more than seven days, unless continued storage is required for evidentiary purposes. In which case, all or part of the data will be excluded from deletion until the investigation of the relevant incident is finally resolved.
 
-## Posting comments
+### Contact
+If you contact us via email or the contact form, the data you provide will be used for the purpose of processing your request. We must have this data in order to process and answer your inquiry; otherwise we will not be able to answer it in full or at all.
 
-On our website we offer you the opportunity to post comments about individual articles. The comment functionality “Disqus” is provided as a service from Big Head Labs, Inc., San Francisco, USA. Disqus is an interactive comment service that allows users to post comments on all websites that use the Disqus service with a single sign-on to the provider. Users can also sign-up and sign-in with existing accounts with Facebook (via Facebook Connect), Twitter, Yahoo, and OpenID. Posting comments is also possible without registration and sign-in (as “Guest”). More information about Disqus and its service can be found at [https://www.disqus.com](https://www.disqus.com).
+The legal basis for this data processing is Art. 6 Para. 1 lit. b) GDPR.
 
-When posting comments, your data is processed and stored with that provider. You can access the provider’s Terms of Service and Privacy Policy at [https://docs.disqus.com/help/29/](https://docs.disqus.com/help/29/) and [https://docs.disqus.com/help/30/](https://docs.disqus.com/help/30/), respectively.
-If you sign-in to Disqus using your Facebook, Twitter, Yahoo or OpenID account, these providers may also collect, process, and store data. Please refer to the privacy policies of the respective provider for further information.
-We reserve the rights to delete inappropriate comments or spam.
+Your data will be deleted once we have fully answered your inquiry and there is no further legal obligation to store your data, such as if an order or contract resulted therefrom.
 
-## Use of Google Analytics with anonymization
+### User posts, comments, and ratings
+We offer you the opportunity to post questions, answers, opinions, and ratings on our website, hereinafter referred to jointly as "posts." If you make use of this opportunity, we will process and publish your post, the date and time you submitted it, and any pseudonym you may have used.
 
-Our website uses Google Analytics, a web analysis service from Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043 USA, hereinafter referred to as “Google“. Google Analytics employs so-called “cookies“, text files that are stored to your computer in order to facilitate an analysis of your use of the site.
+The legal basis for this is Art. 6 Para. 1 lit. a) GDPR. You may revoke your prior consent under Art. 7 Para. 3 GDPR with future effect. All you have to do is inform us that you are revoking your consent.
 
-The information generated by these cookies, such as time, place and frequency of your visits to our site, including your IP address, is transmitted to Google’s location in the US and stored there.
+In addition, we will also process your IP address and email address. The IP address is processed because we might have a legitimate interest in taking or supporting further action if your post infringes the rights of third parties and/or is otherwise unlawful.
 
-We use Google Analytics with an IP anonymization feature on our website. In doing so, Google abbreviates and thereby anonymizes your IP address before transferring it from member states of the European Union or signatory states to the Agreement on the European Economic Area.
+In this case, the legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in any legal defense we may have to mount.
 
-Google will use this information to evaluate your usage of our site, to compile reports on website activity for us, and to provide other services related to website- and internet usage. Google may also transfer this information to third parties if this is required by law or to the extent this data is processed by third parties on Google´s behalf.
+### Google Fonts
+Our website uses Google Fonts to display external fonts. This is a service provided by Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043 (hereinafter: Google).
 
-Google states that it will in never associate your IP address with other data held by Google. You can prevent cookies from being installed by adjusting the settings on your browser software accordingly. You should be aware, however, that by doing so you may not be able to make full use of all the functions of our website.
+Through certification according to the EU-US Privacy Shield
 
-Google also offers a disabling option for the most common browsers, thus providing you with greater control over the data which is collected and processed by Google. If you enable this option, no information regarding your website visit is transmitted to Google Analytics. However, the activation does not prevent the transmission of information to us or to any other web analytics services we may use. For more information about the disabling option provided by Google, and how to enable this option, visit [https://tools.google.com/dlpage/gaoptout?hl=en](https://tools.google.com/dlpage/gaoptout?hl=en).
+[https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active]([https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active])
 
-## Information/Cancellation/Deletion
+Google guarantees that it will follow the EU's data protection regulations when processing data in the United States.
 
-On the basis of the Federal Data Protection Act, you may contact us at no cost if you have questions relating to the collection, processing or use of your personal information, if you wish to request the correction, blocking or deletion of the same, or if you wish to cancel explicitly granted consent. Please note that you have the right to have incorrect data corrected or to have personal data deleted, where such claim is not barred by any legal obligation to retain this data.
+To enable the display of certain fonts on our website, a connection to the Google server in the USA is established whenever our website is accessed.
 
-Based on the [Sample Data Privacy Policy Statement](https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html) provided by the [law offices of Weiß & Partner](https://www.ratgeberrecht.eu/)
+The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in the optimization and economic operation of our site.
+
+When you access our site, a connection to Google is established from which Google can identify the site from which your request has been sent and to which IP address the fonts are being transmitted for display.
+
+Google offers detailed information at
+[https://adssettings.google.com/authenticated](https://adssettings.google.com/authenticated) \
+[https://policies.google.com/privacy](https://policies.google.com/privacy)
+
+in particular on options for preventing the use of data.
+
+[Model Data Protection Statement](https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html) for [Anwaltskanzlei Weiß & Partner](https://www.ratgeberrecht.eu/)
