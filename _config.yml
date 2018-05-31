@@ -39,9 +39,6 @@ tag_page_layout: tag_page
 tag_page_dir: tags
 tag_permalink_style: pretty
 
-disqus:
-  shortname: baitando
-
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-cayman-blog
