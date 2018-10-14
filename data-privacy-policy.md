@@ -66,7 +66,7 @@ Our website uses Google Fonts to display external fonts. This is a service provi
 
 Through certification according to the EU-US Privacy Shield
 
-[https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active]([https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active])
+[https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active](https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active])
 
 Google guarantees that it will follow the EU's data protection regulations when processing data in the United States.
 

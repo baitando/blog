@@ -1,8 +1,11 @@
 ---
 layout: post
-title:  "Integration of Homematic thermostats with openHAB"
+title:  "Integration of Homematic Thermostats with openHAB"
 category: IT
 tags: smart-home openhab
+bigimg: /img/bigimg_heating.jpg
+credname: Jarosław Ceborski
+credurl: https://unsplash.com/photos/jn7uVeCdf6U
 comments: true
 excerpt: My first smart home experience was setting up a Homematic gateway with some thermostats in my parents' house. This post shows how to integrate such devices with openHAB.
 ---
@@ -24,33 +27,33 @@ All file system paths are valid for an APT based installation. This is e.g. the 
 
 There is a [Homematic binding][oh-homematic-binding] available for openHAB 2, which is able to communicate with a Homematic CCU2 gateway using your network. 
 
-![Installing the Homematic binding via Paper UI]({{ site.url }}/assets/oh_homematic_install_binding.png){: .center-image }
+![Installing the Homematic binding via Paper UI](/img/oh_homematic_install_binding.png){: .center-image }
 
 You can install the binding using the Paper UI as shown in the screenshot above. As an alternative, you can specify it in your ``/etc/openhab2/services/addons.cfg`` file as shown below.
 
-{% highlight console %}
+```
 # A comma-separated list of bindings to install (e.g. "sonos,knx,zwave")
 binding = homematic
-{% endhighlight %}
+```
 
 Once the binding is installed, it's time to add the CCU2 gateway as openHAB thing. According to the [binding's readme][oh-homematic-binding], gateway discovery is only supported for Homegear. Therefore we need to add the CCU2 as bridge in a thing file manually. Our example uses the file ``/etc/openhab2/things/test.things``. Please change the gateway address according to your settings.
 
-{% highlight console %}
+```
 Bridge homematic:bridge:ccu [ gatewayAddress="192.168.0.55" ]
-{% endhighlight %}
+```
 
 After the CCU2 is registered in openHAB, the auto discovery mechanism should find all devices connected to the gateway automatically. They are shown in the inbox of the Paper UI similar to the screenshot below.
 
-![Automatically discovered Homematic device shown in inbox of openHAB]({{ site.url }}/assets/oh_homematic_discovery_result.png){: .center-image }
+![Automatically discovered Homematic device shown in inbox of openHAB](/img/oh_homematic_discovery_result.png){: .center-image }
 
 You can use the Paper UI to add each discovered device as a thing. Just click on the inbox entry, enter a name and click on the add button. If you prefer the file based definition, you can add the device entry in your thing file (here it is located in ``/etc/openhab2/things/test.things``) as shown below.
 
-{% highlight console %}
+```
 Bridge homematic:bridge:ccu [ gatewayAddress="192.168.0.55" ]
 {
   Thing HM-CC-RT-DN MEQ0799157
 }
-{% endhighlight %}
+```
 
 # Basic openHAB configuration
 
@@ -58,24 +61,24 @@ The Homematic binding recognizes available channels out of the box. They are sho
 
 Additionally, there is a "Show more" button in the upper right corner. Clicking on it shows all available channels of the thermostat.
 
-![Homematic HM-CC-RT-DN thermostat channels recognized by the Homematic openHAB binding]({{ site.url }}/assets/oh_homematic_channels.png){: .center-image }
+![Homematic HM-CC-RT-DN thermostat channels recognized by the Homematic openHAB binding](/img/oh_homematic_channels.png){: .center-image }
 
 The channel names give a hint regarding their purpose. For getting a deeper understanding, I recommend having a look at the documents listed on [HomeMatic-INSIDE][oh-homematic-list]. Regarding the channel specification, especially [the fourth document containing the data point specification][oh-homematic-channels] is relevant.
 
 Using those channels is well known openHAB configuration stuff. You can create items assigned to relevant channels for showing or modifying the values via Basic UI using a sitemap. For this reason, no further explanation is given here. A file based item configuration is shown below.
 
-{% highlight console %}
+```
 Number  Current_Temperature "Current temperature [%.1f °C]"  <temperature>   { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#ACTUAL_TEMPERATURE" }
 Number  Target_Temperature  "Target temperature [%.1f °C]"   <temperature>   { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#SET_TEMPERATURE" }
 String  Control_Mode        "Mode [%s]"                      <settings>      { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#CONTROL_MODE" }
 Number  Battery_State       "Battery state [%.1f V]"         <energy>        { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#BATTERY_STATE" }
 Number  Valve_State          "Valve state [%.0f %%]"         <settings>      { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#VALVE_STATE" }
 Number  Boost_Countdown      "Boost countdown [%.0f min]"    <settings>      { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#BOOST_STATE" }
-{% endhighlight %}
+```
 
 For showing this in the Basic UI, a corresponding sitemap definition is needed. Here we show the most common values and offer the possibility to change the target temperature. Please have a look at the example sitemap shown below.
 
-{% highlight console %}
+```
 sitemap test label="Homematic thermostat test"
 {
     Frame label="Homematic thermostat" {
@@ -87,11 +90,11 @@ sitemap test label="Homematic thermostat test"
         Text item=Valve_State
     }
 }
-{% endhighlight %}
+```
 
 Now you can see the current state of the thermostat's battery, the current temperature, and the currently active control mode. Additionally you are able to change the target temperature by clicking the up and down buttons. A screenshot is attached below. 
 
-![Simple openHAB configuration shown in Basic UI]({{ site.url }}/assets/oh_homematic_simple_basicui.png){: .center-image }
+![Simple openHAB configuration shown in Basic UI](/img/oh_homematic_simple_basicui.png){: .center-image }
 
 If you'd like to show different labels for the control modes, you can use the [Map transformation service][oh-transformation-map]. For further details please have a look at the [documentation][oh-transformation-map].
 
@@ -120,7 +123,7 @@ For being able to switch between the automatic and the manual mode, we need to u
 
 Due to the fact, that each item is assigned to a single channel in openHAB, additional items need to be defined for being able to trigger a mode switch. In case of a file based item definition, it would look like shown below.
 
-{% highlight console %}
+```
 Number  Current_Temperature  "Current temperature [%.1f °C]" <temperature>   { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#ACTUAL_TEMPERATURE" }
 Number  Target_Temperature   "Target temperature [%.1f °C]"  <temperature>   { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#SET_TEMPERATURE" }
 String  Control_Mode_CCU2    "Mode CCU2 [%s]"                <settings>      { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#CONTROL_MODE" }
@@ -131,7 +134,7 @@ Switch  Control_Mode_Boost   "Boost mode"                    <settings>      { c
 Number  Battery_State        "Battery state [%.1f V]"        <energy>        { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#BATTERY_STATE" }
 Number  Valve_State          "Valve state [%.0f %%]"         <settings>      { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#VALVE_STATE" }
 Number  Boost_Countdown      "Boost countdown [%.0f min]"    <settings>      { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#BOOST_STATE" }
-{% endhighlight %}
+```
  
 There is the already defined string item connected to the read-only control mode, which will be used to get the currently set mode of the thermostat (``Control_Mode_CCU2``). A switch item will be used for triggering the automatic mode (``Control_Mode_Auto``) as well as the boost mode (``Control_Mode_Boost``), and a number item (``Control_Mode_Manu``) will be used for sending the target temperature to the data point of the manual mode for activating it. Additionally, there is an unassigned item (``Control_Mode_openHAB``). 
 
@@ -143,7 +146,7 @@ Now we need to connect the items using some logic implemented as rules. The item
 
 The topics mentioned in #1 to #3 are implemented in the first rule shown below. It reacts on changed values of the openHAB mode selector and triggers the mode specific item and therefore the appropriate Homematic data point.
 
-{% highlight groovy %}
+```groovy
 rule "Thermostat mode switcher"
 when
     Item Control_Mode_openHAB changed 
@@ -163,11 +166,11 @@ if("MANU-MODE".equals(Control_Mode_openHAB.state.toString)) {
     logInfo("homematic", "Switched thermostat to BOOST_MODE")
 }
 end
-{% endhighlight %}
+```
 
 The second rule covers topic #4. If the mode changes on the CCU2 side, the openHAB item is updated. Surprisingly, there is no infinite loop. It seems like the binding handles incoming commands containing the same item value that is already set. For being safe, you could add persistence and compare the new value with the previous one - but we won't cover this here.
 
-{% highlight groovy %}
+```groovy
 rule "Sync thermostat mode"
 when
     Item Control_Mode_CCU2 changed
@@ -176,11 +179,11 @@ then
         Control_Mode_CCU2.state.toString);
     Control_Mode_openHAB.sendCommand(Control_Mode_CCU2.state.toString)
 end
-{% endhighlight %}
+```
 
 Last but not least, we need to update the sitemap definition. The text only showing the currently set control mode (as it was configured for the basic setup), needs to be replaced by a selection item. It offers the possibility to choose between the automatic, the manual and the boost mode.
 
-{% highlight console %}
+```
 sitemap test label="Homematic thermostat test"
 {
     Frame label="Homematic thermostat" {
@@ -192,11 +195,11 @@ sitemap test label="Homematic thermostat test"
         Text item=Valve_State
     }
 }
-{% endhighlight %}
+```
 
 This finally leads to a Basic UI thermostat representation like shown below. It now offers the possibilty to change the thermostat's control mode manually.
 
-![Extended openHAB configuration shown in Basic UI]({{ site.url }}/assets/oh_homematic_extended_basicui.png){: .center-image }
+![Extended openHAB configuration shown in Basic UI](/img/oh_homematic_extended_basicui.png){: .center-image }
 
 # Connection troubleshooting
 
@@ -208,21 +211,21 @@ The second issue was related to the standby mode of my laptop. After it booted f
 
 Third, it might be the case, that one of those ports is already used. The thing details of the bridge in the Paper UI will show an error message mentioning already used ports. If the log level is set accordingly, you will find a message similar to ``java.net.BindException: Address already in use`` in your log file. In this case, you can choose other ports by modifying your thing configuration. This is described in the [readme][oh-homematic-binding] and shown in the example below.
 
-{% highlight console %}
+```
 Bridge homematic:bridge:ccu [ gatewayAddress="192.168.0.55", xmlCallbackPort=9127, binCallbackPort=9126 ]
-{% endhighlight %}
+```
 
 If you are facing a problem, which is not covered above, it might help to set a more verbose log level for the binding (see [openHAB documentation][oh-logging]). If you'd like to set the configuration just for the current process, you can use the Karaf console (see also the logging related chapter of [this blog post][post-zwave]).
 
-{% highlight terminal %}
+```console
 openhab> log:set debug org.openhab.binding.homematic
-{% endhighlight %}
+```
 
 If you'd like to change the log level persistently, you can change the logging configuration in ``/var/lib/openhab2/etc/org.ops4j.pax.logging.cfg``. For setting the Homematic binding log level to debug, you should add a line similar to the one shown below or change the existing one if present.
 
-{% highlight terminal %}
+```
 log4j.logger.org.openhab.binding.homematic = DEBUG
-{% endhighlight %}
+```
 
 From this time on, more Homematic related log messages are written to the log file, which is located in ``/var/log/openhab2/openhab.log``. For more details, please have a look at the [corresponding section of the binding's readme][oh-homematic-logging].
 

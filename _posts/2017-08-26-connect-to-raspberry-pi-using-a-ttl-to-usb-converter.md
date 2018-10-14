@@ -1,8 +1,11 @@
 ---
 layout: post
-title:  "Connect to Raspberry Pi using a TTL to USB converter"
+title:  "Connect to Raspberry Pi Using a TTL to USB Converter"
 category: IT
 tags: raspberry-pi
+bigimg: /img/bigimg_ttl.jpg
+credname: Chris Ried
+credurl: https://unsplash.com/photos/bN5XdU-bap4
 comments: true
 excerpt: A direct connection to a Raspberry Pi using a TTL to USB converter is a helpful tool during setup. This post shows how to set up the connection.
 ---
@@ -16,7 +19,7 @@ This post shows only my personal experiences with the specific hardware I used. 
 
 First of all things need to be wired together, because my converter consists of the USB part offering some pins and five cables in different colors.
 
-![Cable connection on the Raspberry Pi side]({{ site.url }}/assets/raspi_board_usb_pins_small.jpg){: .center-image }
+![Cable connection on the Raspberry Pi side](/img/raspi_board_usb_pins_small.jpg){: .center-image }
 
 The USB part shows some labels for each pin. After reading some other posts ([this][wiring] one was helpful) I found out which pin of the Raspberry Pi fits to which one on the USB side. The image above shows the result. It worked although I'm not sure if I chose the right colors. But that's not that important if the right pins are connected to each other. 
 
@@ -37,11 +40,11 @@ After the pins are connected, it's time to test the connection to the debug cons
 
 Once the converter is recognized and registered as serial device, e.g. [Putty][putty] can be used for connecting to the debug console. The screenshot below shows the connection settings I needed to use.
 
-![Putty settings used for connecting to the debug console]({{ site.url }}/assets/putty_ttl_settings.png){: .center-image }
+![Putty settings used for connecting to the debug console](/img/putty_ttl_settings.png){: .center-image }
 
 The COM port might differ but you should make sure to choose the right speed resp. the correct [baud rate][wiki-baud]. If the connection is established but weird characters are shown in the console window, the baud rate might be wrong.
 
-![Putty session connected to the debug console]({{ site.url }}/assets/putty_ttl_terminal.png){: .center-image }
+![Putty session connected to the debug console](/img/putty_ttl_terminal.png){: .center-image }
 
 Once the connection was established successfully you should see the same output like you would see on a screen directly connected to the Raspberry Pi.
 

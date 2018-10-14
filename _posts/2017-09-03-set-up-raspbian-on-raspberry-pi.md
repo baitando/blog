@@ -3,6 +3,9 @@ layout: post
 title:  "Set up Raspbian on Raspberry Pi"
 category: IT
 tags: raspberry-pi linux
+bigimg: /img/bigimg_raspi_board.jpeg
+credname: Craig Dennis
+credurl: https://www.pexels.com/photo/usb-technology-green-microchip-57007
 comments: true
 excerpt: Setting up Raspbian on a Raspberry Pi is well documented. This post shows some additional, hopefully helpful configuration steps.
 ---
@@ -19,11 +22,11 @@ Nowadays you only need to download and install a tool called Etcher for being ab
 
 If you use Windows 10, it might be the case that a permission error like the one below is shown.
 
-![Error shown when launching Etcher without administrative rights]({{ site.url }}/assets/etcher_error.png){: .center-image }
+![Error shown when launching Etcher without administrative rights](/img/etcher_error.png){: .center-image }
 
 For solving this issue, you need to start Etcher with administrative privileges. Once started successfully, you need to select the image archive downloaded before. Afterwards the target drive needs to be selected. After double checking those settings, you can start the flashing process.
 
-![Necessary settings for Etcher]({{ site.url }}/assets/etcher_settings.png){: .center-image }
+![Necessary settings for Etcher](/img/etcher_settings.png){: .center-image }
 
 You can close Etcher and eject the SD card as soon as the finish message is shown.
 
@@ -36,25 +39,25 @@ Once the system is ready, you can log in using the default credentials. The defa
 
 As a good practice, you should create a new user for yourself and - very important - delete the default one. The new user should be part of the sudo group. After the user exists, you should set the password and exit the session.
 
-{% highlight console %}
+```console
 pi@raspberrypi:~$ sudo useradd -m -s /bin/bash dummyusr --groups sudo
 pi@raspberrypi:~$ sudo passwd dummyusr
 pi@raspberrypi:~$ exit
-{% endhighlight %}
+```
 
 The new user should replace the default one. For being able to remove the predefined one named `pi`, the previously performed log out is needed. Open a new session with your new user and delete the old user.
 
-{% highlight console %}
+```console
 dummyusr@raspberrypi:~$ sudo userdel -r pi
-{% endhighlight %}
+```
 
 ## Update system settings
 
 There are some more useful settings you should configure. The easiest way to do this, is using the `raspi-config` tool.
 
-{% highlight console %}
+```console
 dummyusr@raspberrypi:~$ sudo raspi-config
-{% endhighlight %}
+```
 
 I suggest to configure the following things:
 
@@ -72,82 +75,82 @@ The last step in the setup described here is setting up the network connection. 
 
 If you would like to connect to your local wifi network, there are some necessary steps to do. First of all you should scan for reachable wifi networks. The commands below assume, that you use the interface named `wlan0`, which is e.g. the case if you use the onboard wifi chip of the Raspberry Pi. This name might differ, if you use another interface.
 
-{% highlight console %}
+```console
 dummyusr@raspberrypi:~$ iwlist wlan0 scan | grep ESSID
                     ESSID:"FRITZ!Box 6360"
                     ESSID:"WLAN-E71X60"
                     ESSID:"FRITZ!Box 6490 Cable"
                     ESSID:"WLAN-833491"
-{% endhighlight %}
+```
 
 If the desired network is listed, your Raspberry Pi is able to reach it. The desired one here uses the SSID `WLAN-833491`. 
 
 Now we need to configure this network. The SSID and the passphrase need to be specified. For security reasons, you should encrypt the passphrase first by using the `wpa_passphrase` command.
 
-{% highlight console %}
+```console
 dummyusr@raspberrypi:~$ wpa_passphrase "WLAN-833491" "verysecretpassphrase"
 network={
         ssid="WLAN-833491"
         #psk="verysecretpassphrase"
         psk=d2453687b26a9d982b4609988fdb78c6f2248fd925f65bb304ee62a8bd91d89d
 }
-{% endhighlight %}
+```
 
 The output needs to be appended to the relevant configuration file. Please make sure to delete the commented out line containing the unencrypted passphrase.
 
-{% highlight console %}
+```console
 dummyusr@raspberrypi:~$ sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
-{% endhighlight %}
+```
 
 For setting a static IP address I used `dhcpcd`. So first check, if the service is active.
 
-{% highlight console %}
+```console
 dummyusr@raspberrypi:~$ sudo systemctl status dhcpcd
-{% endhighlight %}
+```
 
 If the service is not active, enable and start it by using the commands listed below.
 
-{% highlight console %}
+```console
 dummyusr@raspberrypi:~$ sudo systemctl enable dhcpcd
 dummyusr@raspberrypi:~$ sudo systemctl start dhcpcd
-{% endhighlight %}
+```
 
 For setting the static IP address, you need to edit a configuration file.
 
-{% highlight console %}
+```console
 dummyusr@raspberrypi:~$ sudo vi /etc/dhcpcd.conf
-{% endhighlight %}
+```
 
 Please add lines similar to the ones shown below and remember to replace the values with the ones you need.
 
-{% highlight text %}
+```
 interface wlan0
 static ip_address=192.168.1.2/24
 static routers=192.168.1.1
 static domain_name_servers=192.168.1.1
-{% endhighlight %}
+```
 
 After the configuration is done, you should reboot the device.
 
-{% highlight console %}
+```console
 dummyusr@raspberrypi:~$ sudo reboot
-{% endhighlight %}
+```
 
 Once the device is up and running again, you can check, if the connection to the network was established. If the interface configuration shown after running the command below contains the static IP address you specified, the device successfully connected to the wifi network. Please replace the interface name, if it is not `wlan0` in your case.
 
-{% highlight console %}
+```console
 dummyusr@raspberrypi:~$ ifconfig wlan0 | grep "inet addr"
 inet addr:192.168.1.2  Bcast:192.168.1.255  Mask:255.255.255.0
-{% endhighlight %}
+```
 
 ## Install latest system updates
 
 As last step in the configuration process described here, you should install the latest updates.
 
-{% highlight console %}
+```console
 dummyusr@raspberrypi:~$ sudo apt-get update
 dummyusr@raspberrypi:~$ sudo apt-get upgrade
-{% endhighlight %}
+```
 
 ## Further steps
 
