@@ -1,0 +1,24 @@
+<script>
+
+    Dsgvo.register(Dsgvo.optIn, function () {
+        window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+        };
+        ga.l = +new Date;
+        ga('create', 'UA-XXXXX-X', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+        const gascript = document.createElement("script");
+        gascript.async = true;
+        gascript.src = "https://www.google-analytics.com/analytics.js";
+        gascript.id = "ga";
+        document.getElementsByTagName("head")[0].appendChild(gascript)
+    });
+
+    Dsgvo.register(Dsgvo.optOut, function () {
+        const element = document.getElementById("ga");
+        if (element !== null) {
+            element.parentNode.removeChild(element);
+        }
+    });
+</script>

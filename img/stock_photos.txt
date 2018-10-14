@@ -1,0 +1,8 @@
+bigimg_raspi_board.jpeg: https://www.pexels.com/photo/usb-technology-green-microchip-57007
+bigimg_ink.jpg: https://unsplash.com/photos/mBHuEkka5wM
+bigimg_echo.jpg: https://unsplash.com/photos/tsBropDpnwE
+bigimg_labeling.jpg: https://unsplash.com/photos/JuFcQxgCXwA
+bigimg_heating.jpg: https://unsplash.com/photos/jn7uVeCdf6U
+bigimg_cloud.jpeg: https://www.pexels.com/photo/white-switch-hub-turned-on-159304
+bigimg_analyze.jpeg: https://www.pexels.com/photo/close-up-of-microscope-256262
+bigimg_ttl.jpg: https://unsplash.com/photos/bN5XdU-bap4

@@ -1,0 +1,46 @@
+language: ruby
+rvm:
+  - 2.4.1
+stages:
+  - build
+  - test
+  - before_deploy
+  - deploy
+branches:
+  only:
+  - master
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: XU8kzaI27Age5PmtTt1clv3EsJg4zG3Tnhr/798c05eEJWKJHqXA4OernrbWhdZVCa0uv60+DeMcCUbltR8W1e+6HyKxaS3xHZ8vWhig5L/RcwuvtFhkROtsBShx8e4YcE9eNGeD6nzC9ZSwseUQP7rMgNFA7OxY30z297pavzgxvATvRZgSKpmfCq2D5ArY4GnkjWYwRbKMDkFPbpKmunEIpz/Il+5XH4tmBAfqYRv/YY9Aw1Qqok/7Ch0sg+L8GH8pb4YkKLqdmPk/LP0rPhq9wM1b/BBJFw+Wubw60LWXxuF10QdXsXRNE8p+60EbKgWrAaV+cYAVREaUJePjo7884tpSQfhRArKsIbVhX2SMmlvKCdf5kiq9gYUpHi+zBBqYyw2pGxDst/U8a2ZAhsGFYecoSmNTlDSEOwk3cgQzc/YLejCkL+YmzOv9WL+MA3iIkuW1Z8/SyGG+uTf14r13HGnQfnKBrMIxtK/WdWEOL0r6Nf8Pzv9TkbGXXOWN6j1fW0FM7mGL2JwGyYDygqPNbAsvTnPcJdIdUZuQwBeuEHPIqBiRW0XML3fWqw7TvNUQqktuC3DEx+WAgWo4jhT7bXp6acKKygTOZk1732WS/oRR1oRIItdbguWBJxavLcShoydEZD0BEA/ubq8O+yjeHKj3B62cDgrrJ4O9s3E=
+  - secure: eVKil1w8lFK/wTfoZYEZixronejZRd2Z3EFeAFsFhF0dx5L0/W7K4nY4VL5GNJeAIBfoE7uTZnvYYrMnsHi90pPOmdWMnAff/8zEovHX/OBtDoorp0iL2qmFE8zjtyVAyWa0kbRLst2P40yC+hlF+yFHQytRTDcov2od6JwYlG1l1PacN9yoEC9ZJunetTxMwp1BFtkLRoKlKPbDOmch9pirU0si5BiJb0RdmbosYnbJif89v7nJSwgn7r9B9zXu6BP5SXc0qvj2zTRUkE7fTiCi+4mmO5WxmOkuOKYsEN0U0r+lrx5a/d/4b1oBg+MXohA56Z5k5wuBLa26JZAYSC3FIybKs19ig+zlWt1P4OaY9M0AAXf1m1dgxWc16OKvIJqv6fEnHjw6vp+ZlBH1lwZs0OPbku4AaTZuV9CfFxzgdjETSa005t6+I6I+emghP8IZrgUXrK62rYHKFdMkAFHqHMXmm0Lp5DiX3ZpgGWAa8ZDOfyRz+dMz3/DWECyQvZngBdHPUXuM8YLQ4YH/Tn8+Ya8/muNbD0PuDUBu06gWGmKaBGKPRnAWTm/Sw2rdPezGbeAonpIrX8SJlPblLMwIapKTH7iTw5ArKhkr04PoN3ZzZcpzV+igUb7yq+qoeIg+k3rvcd0OdHYYcCJ6KZYgkV8doKAIG6MpJaDe364=
+  - secure: MdpN7hVcdoIreS+y6o2xKVywxc0Ux37V33T4/wYbT544zKJPpnjn2JAiZZHU52k8u+/OA8Adegp9FpREMDHOsbE8v9VKqpGmzVkCta5r84o6al4VdljAZE5alyfFJcEuQs2/lllybw6C9xMyXMeKhv3dgx19ZV1NqKiVol5y66P3k7F0C9xwcMxCdDFgE1IOWANjPzqXc462Y9PqtnECuLUkWGu0yFz7IpKQz9++TtaWemeYenHDVdk5UNqGocodOLyKNh980fVv8WeiEZ0F2rypFO8iHV6/W/95k/q4MoUnAx3lfZCWlh14XZIA/AbJrYcIfb9LorM9iF/asyUrw3SOX3qrdvF7U/kK+c7xFA7TtmNY0BSgDuIuB25Wv4w5nB2F02xuQNeuuq7ykjgRyey5KHMqCSGsJvLe6uIrMTofLGoI3Cw9B9MnCylcwsJzkfO3mZ3dezMCUsEx81Ra8uCtYMvAfd/+C4jLki6rnd7GYW0+BmS9Lz7MXxsjpPnFifX7jNhgrHZ1EjxTK6L7vQhqBCWTSU67x2Yy89elNYNVGEi1w25e951FihIr0XZGL/N7R+MfjbRMFQd8TGJ5glHRoLe00pY6kIHrljoPST9I/67zyj1t1jK+CKW2Z3TI6r0BVgtmwXNTzRFEPGnEGr6MiO7sgYjMI9+UU+2/MyE=
+  - secure: VDnnmF48sEAjyvabPkmRAqUafUGFjEpw8kgE1szoyZcxb3FPKaLZaMV4DtCcdJsfZhBu0kR5hfOjRpjMaYnCXWkNaYCgmQ1h/x44gUQ+6DOScDl2ClxjPWHviDdHpnnalDMqZQ4MheKpEpSfANj6SrBXKogko56A0tOWsIYXcx6qRK+ImdBNhMdJkXMUuuGJriPrEXWpFfldzsSy2CwuBYfVwY5/8Rz7eArB4V82vS0n8tzYkANLc60xl9QykWtl2nOIFg2xpdcv4D1ng685Hz4DkV08WseBYAZ33HOTN3SPgLQcg6MmqwYPhw9XtmMvjAsXixxrBqtfAmPqTkJPpGLVxDwt4k/UlzcccwA2uVwGpZ1SD+A9i4iGucRv0vrNplGfciBfsQdfjFBWajtwaWgOlZVGoOUVrK80XSqQdsx+3wpzil4HZmj1GtYHPxZ1JsYiYTibCe/GzgYShmi+DOMjdRaF5cbS2qtZnyK04mBBaYFjk7ORg/AbiV6opGtI2AiM6QHYY9aSGbS4RC36gMdpvTbkKYLYkZmT7Izd1po/NFwwg5m+mzBY6qWgS/t5uQsfAdfIGk9MjMt5RJtvi3GqohGvJZ932lGkZlgDEyec/By+5cmsOs16QgmAvyZgGvVR9ZZsLtqhFeAY3pN2UQOk3QptNvxfDS6NDkWWhCY=
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
+sudo: false
+cache: bundler
+notifications:
+  email: false
+
+build:
+  script: bundle exec jekyll build
+
+test:
+  script: bundle exec htmlproofer --disable-external --assume-extension --empty-alt-ignore ./_site
+
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_d080322c51a6_key -iv $encrypted_d080322c51a6_iv
+  -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/deploy_rsa
+- ssh-add /tmp/deploy_rsa
+- echo -e "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --quiet --delete-after _site/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
+  on:
+    branch: master

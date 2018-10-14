@@ -1,0 +1,115 @@
+{% if site.dsgvo %}
+<!-- GDPR -->
+<link rel="stylesheet" type="text/css"
+      href="/ext/cookieconsent/cookieconsent.min.css"/>
+<script src="/ext/cookieconsent/cookieconsent.min.js"></script>
+<script>
+
+    const Dsgvo = {
+        hooks: [],
+        optIn: 'optIn',
+        optOut: 'optOut',
+
+        register: function (name, callback) {
+            if ('undefined' === typeof(Dsgvo.hooks[name]))
+                Dsgvo.hooks[name] = [];
+            Dsgvo.hooks[name].push(callback)
+        },
+
+        call: function (name, arguments) {
+            if ('undefined' !== typeof(Dsgvo.hooks[name]))
+                for (let i = 0; i < Dsgvo.hooks[name].length; ++i)
+                    if (true !== Dsgvo.hooks[name][i](arguments)) {
+                        break;
+                    }
+        }
+    };
+
+    window.addEventListener("load", function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#000"
+                },
+                "button": {
+                    "background": "#f1d600"
+                }
+            },
+            "content": {
+                "message": "This website uses Google Analytics for optimizing the content. Do you allow this? You can change this setting at any time.",
+                "dismiss": "Decline",
+                "allow": "Accept",
+                "link": "Data Privacy Policy",
+                "href": "https://www.baitando.de/privacy-statement"
+            },
+            "position": "bottom-right",
+            "type": "opt-in",
+            onInitialise: function (status) {
+                const type = this.options.type;
+                const didConsent = this.hasConsented();
+                if (type === 'opt-in' && didConsent && dntDisabled()) {
+                    optIn();
+                } else {
+                    optOut();
+                }
+            },
+
+            onStatusChange: function (status, chosenBefore) {
+                console.log("status: " + status);
+                console.log("chosenBefore: " + chosenBefore);
+                const type = this.options.type;
+                const didConsent = this.hasConsented();
+                if (type === 'opt-in' && didConsent && dntDisabled()) {
+                    optIn(true);
+
+                }
+            },
+            onStatusChange: function () {
+                window.location.reload();
+            },
+            onRevokeChoice: function () {
+                const type = this.options.type;
+                if (type === 'opt-in') {
+                    optOut(true);
+                }
+            }
+        })
+    });
+
+    function optIn(reload = false) {
+        Dsgvo.call(Dsgvo.optIn);
+        if (reload) {
+            window.location.reload(true);
+        }
+    }
+
+    function optOut(reload = false) {
+        Dsgvo.call(Dsgvo.optOut);
+
+        const cookies = document.cookie.split(";");
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i];
+            const splitPos = cookie.indexOf("=");
+            const name = splitPos > -1 ? cookie.substr(0, splitPos) : cookie;
+            if (name !== "cookieconsent_status") {
+                document.cookie = name + "=;max-age=0;Path=/; Domain=.baitando.de;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            }
+        }
+
+        // if (reload) {
+        //     window.location.reload(true);
+        // }
+    }
+
+    function dntDisabled() {
+        if (navigator.doNotTrack != 1 && navigator.doNotTrack != "yes" && window.doNotTrack != 1 && navigator.msDoNotTrack != 1) {
+            return true;
+        }
+
+        return false
+    }
+
+
+</script>
+<!-- End DSGVO -->
+{% endif %}
