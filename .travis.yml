@@ -1,11 +1,9 @@
 language: ruby
 rvm:
 - 2.4.1
-stages:
-- build
-- test
-- before_deploy
-- deploy
+before_script:
+- chmod +x ./script/cibuild
+script: "./script/cibuild"
 branches:
   only:
   - master
@@ -23,14 +21,6 @@ sudo: false
 cache: bundler
 notifications:
   email: false
-build:
-  provider: script
-  skip_cleanup: true
-  script: bundle exec jekyll build
-test:
-  provider: script
-  skip_cleanup: true
-  script: bundle exec htmlproofer --disable-external --assume-extension --empty-alt-ignore ./_site
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_136c573afebc_key -iv $encrypted_136c573afebc_iv
   -in deploy_rsa.enc -out /tmp/deploy_rsa -d
