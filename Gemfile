@@ -6,7 +6,7 @@ source 'https://rubygems.org'
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'jekyll-paginate'
 gem 'tzinfo-data', platforms: [:x64_mingw, :mingw, :mswin]
-gem "rake"
+
 gem "jekyll", "~> 3.8"
 gem "html-proofer"
 gem 'jekyll-sitemap'

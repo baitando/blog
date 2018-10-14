@@ -12,8 +12,8 @@ The following privacy policy is intended to inform you in particular about the t
 
 Our privacy policy is structured as follows:
 
-I. Information about us as controllers of your data \
-II. The rights of users and data subjects \
+I. Information about us as controllers of your data<br />
+II. The rights of users and data subjects<br />
 III. Information about the data processing
 
 ## I. Information about us as controllers of your data
@@ -64,10 +64,8 @@ Your data will be deleted once we have fully answered your inquiry and there is 
 ### Google Fonts
 Our website uses Google Fonts to display external fonts. This is a service provided by Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043 (hereinafter: Google).
 
-Through certification according to the EU-US Privacy Shield
-
-[https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active](https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active])
-
+Through certification according to the EU-US Privacy Shield <br />
+[https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active](https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active]) <br />
 Google guarantees that it will follow the EU's data protection regulations when processing data in the United States.
 
 To enable the display of certain fonts on our website, a connection to the Google server in the USA is established whenever our website is accessed.
@@ -76,10 +74,30 @@ The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in 
 
 When you access our site, a connection to Google is established from which Google can identify the site from which your request has been sent and to which IP address the fonts are being transmitted for display.
 
-Google offers detailed information at
-[https://adssettings.google.com/authenticated](https://adssettings.google.com/authenticated) \
-[https://policies.google.com/privacy](https://policies.google.com/privacy)
-
+Google offers detailed information at <br />
+[https://adssettings.google.com/authenticated](https://adssettings.google.com/authenticated) <br />
+[https://policies.google.com/privacy](https://policies.google.com/privacy) <br />
 in particular on options for preventing the use of data.
+
+### Google Analytics
+We use Google Analytics on our website. This is a web analytics service provided by Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043 (hereinafter: Google).
+
+Through certification according to the EU-US Privacy Shield <br />
+[https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active](https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active)<br />
+Google guarantees that it will follow the EU's data protection regulations when processing data in the United States.
+
+The Google Analytics service is used to analyze how our website is used. The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in the analysis, optimization, and economic operation of our site.
+
+Usage and user-related information, such as IP address, place, time, or frequency of your visits to our website will be transmitted to a Google server in the United States and stored there. However, we use Google Analytics with the so-called anonymization function, whereby Google truncates the IP address within the EU or the EEA before it is transmitted to the US.
+
+The data collected in this way is in turn used by Google to provide us with an evaluation of visits to our website and what visitors do once there. This data can also be used to provide other services related to the use of our website and of the internet in general.
+
+Google states that it will not connect your IP address to other data. In addition, Google provides further information with regard to its data protection practices at <br />
+[https://www.google.com/intl/de/policies/privacy/partners](https://www.google.com/intl/de/policies/privacy/partners), <br />
+including options you can exercise to prevent such use of your data. <br />
+
+In addition, Google offers an opt-out add-on at <br />
+[https://tools.google.com/dlpage/gaoptout?hl=en](https://tools.google.com/dlpage/gaoptout?hl=en) <br />
+in addition with further information. This add-on can be installed on the most popular browsers and offers you further control over the data that Google collects when you visit our website. The add-on informs Google Analytics' JavaScript (ga.js) that no information about the website visit should be transmitted to Google Analytics. However, this does not prevent information from being transmitted to us or to other web analytics services we may use as detailed herein.
 
 [Model Data Protection Statement](https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html) for [Anwaltskanzlei Weiß & Partner](https://www.ratgeberrecht.eu/)
