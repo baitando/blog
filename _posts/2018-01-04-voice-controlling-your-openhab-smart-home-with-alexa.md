@@ -4,6 +4,7 @@ title:  "Voice Controlling Your openHAB Smart Home with Alexa"
 category: IT
 tags: smart-home openhab alexa
 bigimg: /img/bigimg_echo.jpg
+share-img: /img/bigimg_echo.jpg
 credname: Andres Urena
 credurl: https://unsplash.com/photos/tsBropDpnwE
 comments: true
