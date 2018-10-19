@@ -95,22 +95,137 @@ For sending notifications as mail, we need to install the [Mail add-on][oh-mail]
 
 ![Installing the openHAB mail add-on](/img/notifications_addon_mail.png){: .center-image }
 
+After the installation finished, you will find a new file named `mail.cfg`in the `conf/services` directory. The default file contains many comments which show how to configure the add-on. Below you will find the most relevant settings. They specify the SMTP account used for sending the mails. Please make sure to set your specific values.
+
 ```properties
 hostname=your.hostname
 username=your_smtp_username
 password=your_smtp_password
-from=openHAB <your@mail.address>
+from=openHAB System <your@mail.address>
 ssl=true
 ```
 
-After the add-on is installed, we can start using it for sending mails. We now add a rule for this type of notification in the rule file (in my case named `notifications.rules`).
+With this installation and configuration work done, we can start using the add-on for sending mails. We now add a rule for this type of notification in the rule file (in my case named `notifications.rules`). The most relevant part is the `sendMail` command, which has some parameters. The first one is the mail address of the recepient. The second one is the topic and the third one the text to send. The rest is similar to the app notification rule.
 
 ```groovy
+rule "Send Notification via Mail"
+when
+    Item Send_via_Mail_Switch changed
+then
+    if(Send_via_Mail_Switch.state == ON)
+    {
+        logInfo("notifications", "Sending notification via mail.")
+        sendMail("ando.hirsch@gmail.com", "Mail Notification", 
+            "This is our notification sent via mail.")
 
+        Send_via_Mail_Switch.postUpdate(OFF)
+    }
+end
 ```
 
+If we now trigger the switch in the Basic UI, a mail is sent. The screenshot below shows an example that was sent to my mail address.
+
+![Mail Notification](/img/notifications_mail.png){: .center-image }
+
 # Send Notifications via Telegram
-Uses the Telegram Bot API
+
+Finally we now will have a closer look at [Telegram][telegram] notifications. This is a pretty interesting notification type. We will use the [openHAB Telegram action][telegram-action], which comes with a [documentation][telegram-action] which shows the necessary steps. We will follow these steps now. 
+
+First of all you need to create a Telegram account if you don't already have one.
+
+1. Download the iOS app, the Android app or open the Web app. The links to these apps and some more are listed on the [Telegram website][telegram-apps].
+1. Enter your phone number.
+1. You will receive a code on your smartphone with the phone number you entered before.
+1. Type in the code.
+
+The notification mechanism in openHAB will leverage the Telegram Bot API. We will now create a new bot, which will be used to send the notifications via Telegram. 
+
+1. Open a new chat with `BotFather` in Telegram.
+1. Send the message `/newbot`.
+1. Give your new bot a name. I used `openHAB`.
+1. Enter the username of the bot. It must be unique on Telegram and must end with `bot`. I used `openHAB_baitando_bot`. The `BotFather` will tell you if the name you entered is already in use. In this case you would have to choose a different one.
+
+If this was successful, the token for accessing the HTTP API is shown. We will need this token later. The complete chat history is shown in the image below. The token is displayed where I blurred the text in this screenshot.
+
+![Mail Notification](/img/notifications_telegram_botfather.png){: .center-image }
+
+The next step is to get the chat ID. Please follow the steps listed below.
+
+1. Open a new chat with your new chat bot.
+1. Send a message in this chat. I simply sent the message `Hello`.
+1. Open the URL `https://api.telegram.org/bot<token>/getUpdates` in your browser - but don't forget to replace `<token>`with the token you generated before.
+1. Your browser will show a JSON result. Please write down the value of `result[0].message.chat.id`.
+
+In my case the JSON below is shown. The value we will need later is `474141047` in my case.
+
+```javascript
+{  
+   "ok":true,
+   "result":[  
+      {  
+         "update_id":494609500,
+         "message":{  
+            "message_id":1,
+            "from":{  
+               "id":474141047,
+               "is_bot":false,
+               "first_name":"Andreas",
+               "last_name":"Hirsch",
+               "language_code":"de-DE"
+            },
+            "chat":{  
+               "id":474141047,
+               "first_name":"Andreas",
+               "last_name":"Hirsch",
+               "type":"private"
+            },
+            "date":1539987708,
+            "text":"Hello"
+         }
+      }
+   ]
+}
+```
+
+Now we have all necessary values for the configuration. Let's install the Telegram add-on. You can do this using the Paper UI like before. Just click on install and the add-on will be installed automatically. A screenshot is provided below.
+
+![Installing the openHAB mail add-on](/img/notifications_addon_telegram.png){: .center-image }
+
+The installation process automatically creates the `telegram.cfg` file in the `conf/services` directory. Please replace `<chat_id>` and `<token>` according to your setup.
+
+```properties
+bots=openHAB
+
+openHAB.chatId=<chat_id>
+openHAB.token=<token>
+```
+Finally we add a new rule, which is responsible of sending the Telegram notification once we trigger the switch in the Basic UI. The sample rule is shown below. The most important command is `sendTelegram`. It is called with two parameters. The first one needs to be the same value than used in the bot definition in `telegram.cfg`. The second parameter is the message itself.
+
+```groovy
+rule "Send Notification via Mail"
+when
+    Item Send_via_Telegram_Switch changed
+then
+    if(Send_via_Telegram_Switch.state == ON)
+    {
+        logInfo("notifications", "Sending notification via Telegram.")
+        sendTelegram("openHAB", 
+            "This is our notification sent via Telegram.")
+
+        Send_via_Telegram_Switch.postUpdate(OFF)
+    }
+end
+```
+
+This rule will send the Telegram message once we trigger the switch in the Basic UI. The screenshot below shows the sample message sent to my Telegram chat.
+
+![Telegram Notification](/img/notifications_telegram.png){: .center-image }
+
+# Conclusion
+
+There are several types of notifications you can send from within your openHAB based smart home environment. This blog post described three of those notifications types. Feel free to adapt the samples shown here to your own needs. You can also refer to the openHAB documentation of the add-ons used here.
+
+Besides the notifications types mentioned here, openHAB provides much more extensions you can use. You can search for them e.g. in the [documentation][oh-addons] or in the add-ons section of the Paper UI.
 
 [my-oh]: https://myopenhab.org/
 [oh-cloud]: https://www.openhab.org/addons/integrations/openhabcloud/
@@ -118,3 +233,7 @@ Uses the Telegram Bot API
 [app-android]: https://play.google.com/store/apps/details?id=org.openhab.habdroid
 [app-ios]: https://itunes.apple.com/de/app/openhab/id492054521?mt=8
 [oh-mail]: https://www.openhab.org/addons/actions/mail/
+[telegram]: https://telegram.org
+[telegram-apps]: https://telegram.org/apps
+[telegram-action]: https://www.openhab.org/addons/actions/telegram
+[oh-addons]: https://www.openhab.org/addons/
