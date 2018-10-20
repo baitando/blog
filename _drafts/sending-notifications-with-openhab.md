@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sending Custom Notifications from within openHAB"
+title:  "Sending Notifications with openHAB"
 category: IT
 tags: openhab smart-home
 bigimg: /img/bigimg_notification.jpeg
@@ -10,24 +10,17 @@ comments: true
 excerpt: There are several types of notifications supported by openHAB. This post shows how to send notifications via mail, via Telegram and via app.
 ---
 
-Besides the well known binding extensions of openHAB there are several extensions available for sending notifications from within your smart home environment. In this post I would like to pick some and show how to configure and use them.
+There are some openHAB add-ons available for sending different types of notifications from within your openHAB based smart home environment. I will pick three of them and show the basic configuration which can be adapted to your own needs.
 
-We will start with some general topics, which are common for all of the selected notification extensions. With this knowledge in mind, we will have a closer look at how to send notifications via the openHAB app, classic mail, and the instant messenger Telegram.
+We will start with some general topics, which are common for the selected notification types. With this knowledge in mind, we will have a closer look at how to send notifications via the openHAB app, via mail, and via the instant messenger Telegram.
 
 # General Introduction
 
-The architecture of openHAB considers extensions. Those extensions are categorized where the categories are 
-* Actions,
-* Bindings,
-* Misc,
-* Persistence,
-* Transformations,
-* User Interfaces, and
-* Voice.
+All notification types and mechanisms used in this blog post require the installation of add-ons. They can be installed in several ways, which are described in the [openHAB documententation][oh-installation].
 
-Those names are used in the Paper UI, which is used for managing extensions. You will find them if you navigate to the Add-ons section.
-
-In most cases those notification mechanisms are encapsulated in Action extensions. With respect to the notification types we are talking about in this post, this affects mail and Telegram notifications. Sending mobile push notifications using the openHAB app involves [openHAB Cloud](https://myopenhab.org/) and is therefore part of the openHAB Cloud extension. This one is part of the Misc category.
+The most simple one is based on the Paper UI which is normally pre-installed. All explanations in this blog post are based on this approach, but will of course also work with the other installation approaches.
+ 
+Sending mobile push notifications using the openHAB app involves [openHAB Cloud](https://myopenhab.org/) and is therefore part of the openHAB Cloud extension. This one is part of the Misc category.
 
 # Basic Setup of Items and Sitemap
 
@@ -237,3 +230,4 @@ Besides the notifications types mentioned here, openHAB provides much more exten
 [telegram-apps]: https://telegram.org/apps
 [telegram-action]: https://www.openhab.org/addons/actions/telegram
 [oh-addons]: https://www.openhab.org/addons/
+[oh-installation]: https://www.openhab.org/docs/configuration/addons.html
