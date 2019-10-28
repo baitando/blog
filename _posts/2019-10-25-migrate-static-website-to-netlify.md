@@ -189,6 +189,16 @@ Please keep in mind that changing the site name will also change the Netlify sub
 
 # Domain Configuration
 
+Now comes the change which will effectively switch from the previous hosting provider to Netlify.
+To achieve this, we have to adjust the DNS first and to configure the domain on Netlify next.
+
+There are several ways to handle this.
+
+* If the domain is not registered yet, you can do that with Netlify.
+Since we are migrating an existing website this is obviously no option here.
+* You can completely switch to the DNS of Netlify.
+This makes it possible to e.g. use branch specific subdomains which are added by Netlify on the fly.
+* You can point a separate DNS to Netlify for your domain.
 
 # Further Performance Tuning
 
