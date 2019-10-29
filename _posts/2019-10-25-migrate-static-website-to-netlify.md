@@ -244,10 +244,28 @@ If the DNS propagation is not already finished, you will see a message similar t
 
 ![Team Dashboard on Netlify](/img/netlify_dns-certincomplete.png){: .center-image }
 
-After the certificate was issued successfully, Netlify configures it for the use with your domain.
+After the certificate was issued successfully, Netlify configures it for your domain.
 This will then look similar to the screenshot below.
 
-![Team Dashboard on Netlify](/img/netlify_dns-certcomplete.png){: .center-image } 
+![Team Dashboard on Netlify](/img/netlify_dns-certcomplete.png){: .center-image }
+
+You may have noticed, that a hint similar to the one below is shown in the configuration section.
+It says that you can add a redirect rule, which redirects from your Netlify subdomain to your custom domain.
+One benefit of this is related to SEO, because you avoid that a crawler scans both - your custom domain as well as the Netlify subdomain.
+
+![Team Dashboard on Netlify](/img/netlify_dns-seohint.png){: .center-image }
+
+In my case this would be no problem, because the canonical URL is set as described in the preparation part in the beginning of this post.
+Nevertheless I don't want my published blog to be available on two different URLs.
+Therefore I created the file `_redirects` in the root directory of my repository.
+Further details on the Netlify redirect configuration is available in the [documentation][netlify-redirects].
+
+```
+https://baitando.netlify.com/* https://www.baitando.de/:splat 301!
+```
+
+Now this file needs to be included in the generated static website.
+Using Jekyll this is achieved with the `include` setting in `_config.yml`. 
 
 # Further Performance Tuning
 
@@ -260,6 +278,65 @@ There you can select which optimizations to apply during deployment.
 Please keep in mind that changes in this configuration get effective with the next deployment.
 To check the results immediately you need to trigger a new deployment manually.
 
+# Status Badge
+
+Netlify offers a status badge which shows the current build and deployment status of the page.
+The markdown snippet for embedding the status badge in a markdown file is provided in the configuration section of the site in Netlify.
+The area containing the snippet looks similar to the screenshot below.
+
+![Netlify Status Badge Showing the Build and Deployment Status](/img/netlify_badge.png){: .center-image }
+
+# Performance Improvements
+
+Now let's check some numbers related to performance.
+Due to the fact that my blog has not that many visitors, this is not that important.
+Nevertheless I am a Software Engineer who is happy with good, stable solutions with good performance.
+
+The numbers below are simply some values from loading one of the blog posts before and after the migration.
+I simply opened the developer console in the browser and requested the same blog post several times to get a feeling for usual loading times which may vary from request to request.
+Then I picked the measurement of a request with a usual response time and wrote it down.
+I think this gives at least an indication of how performance changed with the migration.
+
+First I disabled caching in the developer console of the browser and did some measurements in different scenarios.
+
+| Scenario                                  | Load Time | Transferred | Requests |
+|-------------------------------------------|-----------|-------------|----------|
+| Old without caching                       | 1.79 s    | 1.3 MB      | 33       |
+| New without caching without optimization  | 1.26 s    | 1.2 MB      | 32       |
+| New without caching with optimization     | 1.19 s    | 1.2 MB      | 25       |
+
+After that I enabled caching in the web console and did some more measurements.
+
+| Scenario                                  | Load Time | Transferred | Requests |
+|-------------------------------------------|-----------|-------------|----------|
+| Old with caching                          | 675 ms    | 8.6 KB      | 33       |
+| New with caching without optimization     | 634 ms    | 5.8 KB      | 32       |
+| New with caching with optimization        | 433 ms    | 853 B       | 25       |
+
+These values indicate that performance improved a bit.
+This is what I hoped for, because I did not use a CDN before the migration and now switched to a solution with a CDN.
+Based on these results it seems like it was at least not the wrong decision to move to Netlify from a performance point of view.
+
+# Cleaning Up
+
+Now that the migration itself finished, it is time to clean up.
+I won't go into details here, but the things I had to do are listed below.
+
+* Deactivate the repository on Travis.
+* Remove the `.travis.yml` and `deploy_rsa.enc` files.
+* Delete all data on the old webspace.
+
+# Conclusion
+
+In this post I described the necessary steps I did for the migration of my blog to Netlify.
+This should be more or less also valid for any other static website.
+
+The migration was easily doable and the solution itself looks good from my current point of view.
+I did not regret to migrate and I hope I won't in the future.
+
+I will gather some experience with writing my next blog posts.
+If my current impression is confirmed, I will most likely migrate some other websites I do on a voluntary basis.
+
 [netlify-home]: https://www.netlify.com/
 [netlify-signup]: https://app.netlify.com/signup
 [netlify-pricing]: https://www.netlify.com/pricing/
@@ -267,6 +344,7 @@ To check the results immediately you need to trigger a new deployment manually.
 [netlify-buildcmds]: https://docs.netlify.com/configure-builds/common-configurations
 [netlify-dns]: https://docs.netlify.com/domains-https/custom-domains/#assign-a-domain-to-a-site
 [netlify-externaldns]: https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/
+[netlify-redirects]: https://docs.netlify.com/routing/redirects/
 [ionos-home]: https://www.ionos.de/
 [jekyll-home]: https://jekyllrb.com/
 [github-home]: https://github.com/
