@@ -34,6 +34,9 @@
     {% endfor %}
     {% endif %}
 
+    <link rel="shortcut icon" href="{{ site.url }}/favicon.png" type="image/png" />
+    <link rel="icon" href="{{ site.url }}/favicon.png" type="image/png" />
+
     {% if page.ext-css %}
     {% for css in page.ext-css %}
     {% include ext-css.html css=css %}
