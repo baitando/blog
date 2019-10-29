@@ -192,17 +192,66 @@ Please keep in mind that changing the site name will also change the Netlify sub
 Now comes the change which will effectively switch from the previous hosting provider to Netlify.
 To achieve this, we have to adjust the DNS first and to configure the domain on Netlify next.
 
-There are several ways to handle this.
+There are several ways to handle this, which are also documented in the [Netlify documentation][netlify-dns].
 
-* If the domain is not registered yet, you can do that with Netlify.
+1. If the domain is not registered yet, you can do that with Netlify.
+If you do so, Netlify will automatically do the DNS configuration for you. 
 Since we are migrating an existing website this is obviously no option here.
-* You can completely switch to the DNS of Netlify.
-This makes it possible to e.g. use branch specific subdomains which are added by Netlify on the fly.
-* You can point a separate DNS to Netlify for your domain.
+2. If you already registered the domain elsewhere, you can switch to the DNS of Netlify.
+The result is similar to the previous option and makes it possible to e.g. use branch specific subdomains which are added by Netlify on the fly.
+3. If you already registered the domain elsewhere and you don't want to use the DNS of Netlify, you can point a separate DNS to Netlify for your domain.
+
+I want to keep the impact of the migration as small as possible.
+If I would choose the second approach, I would have to migrate all existing blog unrelated DNS settings related to this domain too.
+Therefore I decided to follow the third approach.
+
+The necessary steps are described in the [documentation][netlify-externaldns].
+If you use already used a subdomain which is not `www`, the DNS adjustment is pretty simple.
+You just have to set the `CNAME` of the subdomain to your Netlify subdomain and everything should work fine from a DNS point of view.
+
+The subdomain I use is `www` which leads to the necessity of additional settings.
+If you register a `www` subdomain in Netlify, the Apex domain is automatically added also.
+In my case I configured `www.baitando.de` and `baitando.de` (the Apex domain) was automatically added.
+In addition to the `CNAME` for the `www` subdomain I had to configure the DNS for the Apex domain. 
+
+Some providers offer the possibility to register `ANAME` or `ALIAS` records which are similar to the `CNAME` but on the Apex level.
+Unfortunately Ionos does not do this.
+Therefore I had to point the `A` record directly to the IP of the Netlify load balancer as suggested in the screenshot below.
+
+![Team Dashboard on Netlify](/img/netlify_dns-config.png){: .center-image }
+
+The downside of pointing to a static IP like we have to do with the `A` record is, that this contradicts the idea of the CDN which leverages different IPs depending on the region of the request.
+Luckily this is no problem in a setup like mine.
+The primary URL of my blog is [https://www.baitando.de](https://www.baitando.de).
+This URL is always the target.
+All other requests like [https://baitando.de](https://baitando.de) are automatically redirected.
+The sitemap also uses the primary URL.
+
+The consequence is, that there would be only a single request which gets redirected to the subdomain, if someone would use the Apex domain in the request.
+All following requests are then directed to the subdomain and make use of the CDN, since we set a `CNAME` there.
+The `A` record is therefore not really a problem from a performance point of view.
+
+Once the DNS changes are done it could be necessary to wait for some time, because the DNS propagation may take some time.
+During this time you will see a message similar to the one in the screenshot below.
+
+![Team Dashboard on Netlify](/img/netlify_dns-dnsincomplete.png){: .center-image }
+
+The next step is to get a certificate for the custom domain which is used to ensure transport layer security.
+You can configure this in the certificate section by uploading an existing certificate.
+I recommend to use a Let's Encrypt certificate, which is a great and easy solution to obtain widely trusted certificates.
+The mechanism to get one is built in Netlify, i.e. after the DNS propagation finished you can trigger the creation process.
+If the DNS propagation is not already finished, you will see a message similar to the one in the screenshot below.
+
+![Team Dashboard on Netlify](/img/netlify_dns-certincomplete.png){: .center-image }
+
+After the certificate was issued successfully, Netlify configures it for the use with your domain.
+This will then look similar to the screenshot below.
+
+![Team Dashboard on Netlify](/img/netlify_dns-certcomplete.png){: .center-image } 
 
 # Further Performance Tuning
 
-I recognized that Netlify can do additional optimizations related to minification and losless image compression.
+I recognized that Netlify can do additional optimizations related to minification and lossless image compression.
 If you want to try out those optimizations you can enable them in the site settings section.
 There you can select which optimizations to apply during deployment.
 
@@ -216,6 +265,8 @@ To check the results immediately you need to trigger a new deployment manually.
 [netlify-pricing]: https://www.netlify.com/pricing/
 [netlify-vcspermissions]: https://docs.netlify.com/configure-builds/repo-permissions-linking/
 [netlify-buildcmds]: https://docs.netlify.com/configure-builds/common-configurations
+[netlify-dns]: https://docs.netlify.com/domains-https/custom-domains/#assign-a-domain-to-a-site
+[netlify-externaldns]: https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/
 [ionos-home]: https://www.ionos.de/
 [jekyll-home]: https://jekyllrb.com/
 [github-home]: https://github.com/
