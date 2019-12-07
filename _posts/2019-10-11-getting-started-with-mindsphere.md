@@ -8,14 +8,14 @@ credname: Anastasia Dulgier
 credurl: https://www.pexels.com/photo/gray-scale-photo-of-gears-159298/
 comments: true
 origin: https://blog.mimacom.com/getting-started-with-mindsphere/
-excerpt: As part of my personal onboarding for Siemens MindSphere my first goal was to simulate a simple thing which delivers data to MindSphere. In this blog post I would like to demonstrate how you can create a simple NodeJS application for sending data to MindSphere platform. The code is available on [GitHub][baitando-repo].
+excerpt: In this blog post I would like to demonstrate how you can create a simple NodeJS application for sending data to MindSphere platform. The code is available on GitHub.
 ---
 
 As part of my personal onboarding for Siemens MindSphere my first goal was to simulate a simple thing which delivers data to MindSphere.
 In this blog post I would like to demonstrate how you can create a simple NodeJS application for sending data to MindSphere platform.
 The code is available on [GitHub][baitando-repo].
 
-## Some Thoughts About the Demo Use Case
+# Some Thoughts About the Demo Use Case
 
 To keep things simple, the use case for the demonstration is to gather data related to a production hall.
 This could be necessary if you want to observe if the temperature in the production hall is within defined boundaries if temperature sensitive processes run there.
@@ -26,7 +26,7 @@ The relevant data points for our sample are:
 
 Of course this is a really small and simplified use case - but it should be enough to demonstrate the basic mechanisms of how to connect something to MindSphere.
 
-## Get Access to MindSphere
+# Get Access to MindSphere
 
 The first step is related to preparation on MindSphere.
 Luckily we already had a mimacom tenant in place which is sufficient for the sample we are building here.
@@ -35,7 +35,7 @@ If you do not already have a tenant available, you can apply for a trial account
 Please be aware that the process behind is most likely a manual one which is therefore not as fast as you are used to from creating an AWS account or similar.
 Another thing you should know is that the website says "If not canceled, the Developer TRIAL will automatically transition into a MindAccess Developer Plan S account".
 
-## Prepare the Data Model
+# Prepare the Data Model
 
 Once you have access to a MindSphere tenant, we can start with the data model preparation.
 Please log in to MindSphere now.
@@ -75,7 +75,7 @@ Enter a name and a description and assign the two previously created aspects to 
 
 ![Configuration of the Room Type](/img/mindsphere_type.png)
 
-## Create the Assets
+# Create the Assets
 
 In the next step we create an asset representing a concrete room.
 Please go to the assets section in the Asset Manager and add a new asset called `ProductionHall` of the  type created in the previous step - which is `mimacom.Room` in my case as you can see in the screenshot below.
@@ -106,7 +106,7 @@ Therefore copy the content of this text area and temporarily store it somewhere.
 You won't be able to retrieve this config again.
 If you loose it, you have to generate a new connection key which most likely invalidates the old one.
 
-## Configure the Data Mapping
+# Configure the Data Mapping
 
 As next step we need to define the data mapping.
 To do this please open the MindConnect Lib plugin of the agent asset and add a new configuration.
@@ -120,7 +120,7 @@ Please note that you have to change the selected asset to the `ProductionHall` t
 
 ![Configuration of the Room Agent in MindSphere](/img/mindsphere_datapoints_mapping.png)
 
-## Simulate an Asset
+# Simulate an Asset
 
 To simulate an asset we use the open source project [MindConnect-NodeJS][mindsphere-nodejs].
 It provides a command line interface we can use to generate a NodeJS project which delivers simulated data of an asset to MindSphere.
@@ -240,7 +240,7 @@ const bulk: TimeStampedDataPoint[] =
 
 Now setup and customization of our simulator project is done. 
 
-## Send Simulated Data
+# Send Simulated Data
 
 We can now run the simulator project to send simulated data of our production hall to MindSphere.
 To do this you need to run the command below in the root directory of the project.
@@ -272,7 +272,7 @@ This means that both screenshots below do not refer to the `ProductionHall` asse
 
 ![Configuration of the Room Agent in MindSphere](/img/mindsphere_room_agent_files.png)
 
-## Conclusion
+# Conclusion
 
 In this blog post we had a closer look at how we can get started with MindSphere.
 We used a simple use case to get familiar with data modeling on MindSphere and how we can send simulated data.
