@@ -2,6 +2,12 @@
 
 This is the source repository of my personal blog which is available on [https://www.baitando.de](https://www.baitando.de). 
 
+# Run Locally
+
+```bash
+bundle exec jekyll serve --livereload --draft
+```
+
 # Image Optimization
 
 * Convert color profile if necessary.
