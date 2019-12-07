@@ -154,7 +154,9 @@ exclude:
   - README.md
   - Vagrantfile
   - vendor
-include: ['.htaccess']
+include:
+  - .htaccess
+  - _redirects
 # prose.io config
 prose:
   rooturl: '_posts'
