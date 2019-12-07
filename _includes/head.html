@@ -76,7 +76,10 @@
 
     <meta property="og:type" content="website"/>
 
-    {% if page.id %}
+    {% if page.origin %}
+    <meta property="og:url" content="{{ page.origin }}"/>
+    <link rel="canonical" href="{{ page.origin }}"/>
+    {% else if page.id %}
     <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
     {% else %}
