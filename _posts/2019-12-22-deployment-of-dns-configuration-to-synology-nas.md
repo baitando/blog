@@ -7,7 +7,6 @@ bigimg: /img/bigimg_automation.jpg
 credname: Daniele Levis Pelusi
 credurl: https://unsplash.com/photos/Pp9qkEV_xPk
 comments: true
-origin: https://blog.mimacom.com/tools-for-testing-rest-apis/
 excerpt: Managing the configuration of a NAS using the user interface is nice, but hard to reproduce. That's why I thought about ways to manage the configuration in Git and to deploy it using scripts. Let's have a closer look at my first attempt related to DNS server configuration.
 ---
 
