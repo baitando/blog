@@ -127,7 +127,7 @@ Due to the fact, that each item is assigned to a single channel in openHAB, addi
 Number  Current_Temperature  "Current temperature [%.1f °C]" <temperature>   { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#ACTUAL_TEMPERATURE" }
 Number  Target_Temperature   "Target temperature [%.1f °C]"  <temperature>   { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#SET_TEMPERATURE" }
 String  Control_Mode_CCU2    "Mode CCU2 [%s]"                <settings>      { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#CONTROL_MODE" }
-Number  Control_Mode_openHAB "Mode openHAB[%s]"             <settings>
+String  Control_Mode_openHAB "Mode openHAB[%s]"             <settings>
 Number  Control_Mode_Manu    "Manual mode"                  <settings>       { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#MANU_MODE" }
 Switch  ControlMode_Auto     "Automatic mode"                <settings>      { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#AUTO_MODE" }
 Switch  Control_Mode_Boost   "Boost mode"                    <settings>      { channel="homematic:HM-CC-RT-DN:ccu:MEQ0799157:4#BOOST_MODE" }
