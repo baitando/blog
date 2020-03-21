@@ -1,7 +1,7 @@
 # --- General options --- #
 # url is the full website URL
 # baseurl is the website's URL without the hostname
-url: "https://www.baitando.de"
+url: "https://www.baitando.com"
 baseurl: ""
 
 # Name of website
@@ -86,7 +86,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "baitando.de"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "baitando.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
