@@ -1,6 +1,6 @@
 # Blog
 
-This is the source repository of my personal blog which is available on [https://www.baitando.de](https://www.baitando.de). 
+This is the source repository of my personal blog which is available on [https://www.baitando.com](https://www.baitando.com). 
 
 # Run Locally
 

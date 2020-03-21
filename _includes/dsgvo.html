@@ -40,7 +40,7 @@
                 "dismiss": "Decline",
                 "allow": "Accept",
                 "link": "Data Privacy Policy",
-                "href": "https://www.baitando.de/privacy-statement"
+                "href": "https://www.baitando.com/privacy-statement"
             },
             "position": "bottom-right",
             "type": "opt-in",
@@ -92,7 +92,7 @@
             const splitPos = cookie.indexOf("=");
             const name = splitPos > -1 ? cookie.substr(0, splitPos) : cookie;
             if (name !== "cookieconsent_status") {
-                document.cookie = name + "=;max-age=0;Path=/; Domain=.baitando.de;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+                document.cookie = name + "=;max-age=0;Path=/; Domain=.baitando.com;expires=Thu, 01 Jan 1970 00:00:00 GMT";
             }
         }
 
