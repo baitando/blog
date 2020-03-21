@@ -17,7 +17,7 @@ Germany
 
 Telephone: [+49 (0) 176 21990745](tel:017621990745)  
 E-Mail: [ando.hirsch@gmail.com](mailto:ando.hirsch@gmail.com)  
-Web address: [https://www.baitando.de](https://www.baitando.de)
+Web address: [https://www.baitando.com](https://www.baitando.com)
 
 ## Disclaimer
 
