@@ -7,3 +7,5 @@ bigimg_cloud.jpeg: https://www.pexels.com/photo/white-switch-hub-turned-on-15930
 bigimg_analyze.jpeg: https://www.pexels.com/photo/close-up-of-microscope-256262
 bigimg_ttl.jpg: https://unsplash.com/photos/bN5XdU-bap4
 bigimg_notification: https://www.pexels.com/photo/beach-bottle-cold-daylight-292426/
+bigimg_connected: https://www.pexels.com/de-de/foto/beleuchtet-beleuchtung-beschilderung-briefe-1356300/
+bigimg_printer: https://www.pexels.com/de-de/foto/arbeit-ausrustung-business-drinnen-1440504/
