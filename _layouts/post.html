@@ -74,7 +74,7 @@ layout: base
             {% if page.comments %}
             <!-- Comments -->
             <div class="comment">
-            {% if site.data.comments[page.slug] %}
+                {% if site.data.comments[page.slug] %}
                 <h1>
                     {% if site.data.comments[page.slug].size > 1 %}
                     {{ site.data.comments[page.slug] | size }}
@@ -94,7 +94,7 @@ layout: base
                     that comments will appear after moderation.</p>
                 <!-- Comments Form -->
                 <form method="POST" action="{{ site.staticman_url }}">
-                    <!--                <input name="options[redirect]" type="hidden" value="https://example.com">-->
+                    <input name="options[redirect]" type="hidden" value="{{ site.url }}/commenting?url={{ site.url }}/{{ page.url }}">
                     <input name="options[slug]" type="hidden" value="{{ page.slug }}">
                     <div class="form-group">
                         <label for="comment-name">Name</label>
