@@ -10,6 +10,9 @@ title: Just Another IT Blog
 # Short description of your site
 description: This is a collection of personal notes shared with everybody
 
+# --- Staticman comments --- #
+staticman_url: https://api.staticman.net/v3/entry/github/baitando/blog/master/comments
+
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
