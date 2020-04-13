@@ -16,3 +16,26 @@
 .post-meta a {
     color: white;
 }
+
+.comment label, .comment button {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 15px 25px;
+    background-color: #FFF;
+    border-radius: 0;
+    color: #404040;
+}
+
+.comment button:hover, .comment button:focus {
+    color: #FFF;
+    border: 1px solid #0085A1;
+    background-color: #0085A1;
+}
+
+.comment button {
+    margin: 0 auto;
+    display: block;
+}
