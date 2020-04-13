@@ -12,8 +12,8 @@ The following privacy policy is intended to inform you in particular about the t
 
 Our privacy policy is structured as follows:
 
-I. Information about us as controllers of your data<br />
-II. The rights of users and data subjects<br />
+I. Information about us as controllers of your data\
+II. The rights of users and data subjects\
 III. Information about the data processing
 
 ## I. Information about us as controllers of your data
@@ -26,7 +26,7 @@ Olnhauser Str. 12
 Germany
 
 Telephone: [+49 (0) 176 21990745](tel:017621990745)  
-E-Mail: [ando.hirsch@gmail.com](mailto:ando.hirsch@gmail.com)  
+E-Mail: [andreas.hirsch@baitando.com](mailto:andreas.hirsch@baitando.com)  
 
 ## II. The rights of users and data subjects
 
@@ -54,6 +54,29 @@ The basis for this storage is Art. 6 Para. 1 lit. f) GDPR. Our legitimate intere
 
 The data will be deleted within no more than seven days, unless continued storage is required for evidentiary purposes. In which case, all or part of the data will be excluded from deletion until the investigation of the relevant incident is finally resolved.
 
+### Cookies
+
+#### a) Session cookies
+We use cookies on our website. Cookies are small text files or other storage technologies stored on your computer by your browser. These cookies process certain specific information about you, such as your browser, location data, or IP address.  
+
+This processing makes our website more user-friendly, efficient, and secure, allowing us, for example, to display our website in different languages or to offer a shopping cart function.
+
+The legal basis for such processing is Art. 6 Para. 1 lit. b) GDPR, insofar as these cookies are used to collect data to initiate or process contractual relationships.
+
+If the processing does not serve to initiate or process a contract, our legitimate interest lies in improving the functionality of our website. The legal basis is then Art. 6 Para. 1 lit. f) GDPR.
+
+When you close your browser, these session cookies are deleted.
+
+#### b) Third-party cookies
+If necessary, our website may also use cookies from companies with whom we cooperate for the purpose of advertising, analyzing, or improving the features of our website.
+
+Please refer to the following information for details, in particular for the legal basis and purpose of such third-party collection and processing of data collected through cookies.
+
+#### c) Disabling cookies
+You can refuse the use of cookies by changing the settings on your browser. Likewise, you can use the browser to delete cookies that have already been stored. However, the steps and measures required vary, depending on the browser you use. If you have any questions, please use the help function or consult the documentation for your browser or contact its maker for support. Browser settings cannot prevent so-called flash cookies from being set. Instead, you will need to change the setting of your Flash player. The steps and measures required for this also depend on the Flash player you are using. If you have any questions, please use the help function or consult the documentation for your Flash player or contact its maker for support.
+
+If you prevent or restrict the installation of cookies, not all of the functions on our site may be fully usable.
+
 ### Contact
 If you contact us via email or the contact form, the data you provide will be used for the purpose of processing your request. We must have this data in order to process and answer your inquiry; otherwise we will not be able to answer it in full or at all.
 
@@ -61,23 +84,37 @@ The legal basis for this data processing is Art. 6 Para. 1 lit. b) GDPR.
 
 Your data will be deleted once we have fully answered your inquiry and there is no further legal obligation to store your data, such as if an order or contract resulted therefrom.
 
-### Google Fonts
-Our website uses Google Fonts to display external fonts. This is a service provided by Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043 (hereinafter: Google).
+### User posts, comments, and ratings
+We offer you the opportunity to post questions, answers, opinions, and ratings on our website, hereinafter referred to jointly as "posts." If you make use of this opportunity, we will process and publish your post, the date and time you submitted it, and any pseudonym you may have used.
 
-Through certification according to the EU-US Privacy Shield <br />
-[https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active](https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active]) <br />
-Google guarantees that it will follow the EU's data protection regulations when processing data in the United States.
+The legal basis for this is Art. 6 Para. 1 lit. a) GDPR. You may revoke your prior consent under Art. 7 Para. 3 GDPR with future effect. All you have to do is inform us that you are revoking your consent.
 
-To enable the display of certain fonts on our website, a connection to the Google server in the USA is established whenever our website is accessed.
+In addition, we will also process your IP address and email address. The IP address is processed because we might have a legitimate interest in taking or supporting further action if your post infringes the rights of third parties and/or is otherwise unlawful.
 
-The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in the optimization and economic operation of our site.
+In this case, the legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in any legal defense we may have to mount.
 
-When you access our site, a connection to Google is established from which Google can identify the site from which your request has been sent and to which IP address the fonts are being transmitted for display.
+### Social media links via graphics
+We also integrate the following social media sites into our website. The integration takes place via a linked graphic of the respective site. The use of these graphics stored on our own servers prevents the automatic connection to the servers of these networks for their display. Only by clicking on the corresponding graphic will you be forwarded to the service of the respective social network.
 
-Google offers detailed information at <br />
-[https://adssettings.google.com/authenticated](https://adssettings.google.com/authenticated) <br />
-[https://policies.google.com/privacy](https://policies.google.com/privacy) <br />
-in particular on options for preventing the use of data.
+Once you click, that network may record information about you and your visit to our site. It cannot be ruled out that such data will be processed in the United States.
+
+Initially, this data includes such things as your IP address, the date and time of your visit, and the page visited. If you are logged into your user account on that network, however, the network operator might assign the information collected about your visit to our site to your personal account. If you interact by clicking Like, Share, etc., this information can be stored your personal user account and possibly posted on the respective network. To prevent this, you need to log out of your social media account before clicking on the graphic. The various social media networks also offer settings that you can configure accordingly.
+
+The following social networks are integrated into our site by linked graphics:
+
+#### twitter
+Twitter Inc., 795 Folsom St., Suite 600, San Francisco, CA 94107, USA
+
+Privacy Policy: [https://twitter.com/privacy](https://twitter.com/privacy)
+
+EU-US Privacy Shield: [https://www.privacyshield.gov/participant?id=a2zt0000000TORzAAO&status=Active](https://www.privacyshield.gov/participant?id=a2zt0000000TORzAAO&status=Active)
+
+#### LinkedIn
+LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Irland, a subsidiary of LinkedIn Corporation, 1000 W. Maude Avenue, Sunnyvale, CA 94085 USA.
+
+Privacy Policy: [https://www.linkedin.com/legal/privacy-policy](https://www.linkedin.com/legal/privacy-policy)
+
+EU-US Privacy Shield: [https://www.privacyshield.gov/participant?id=a2zt0000000L0UZAA0&status=Active](https://www.privacyshield.gov/participant?id=a2zt0000000L0UZAA0&status=Active)
 
 ### Google Analytics
 We use Google Analytics on our website. This is a web analytics service provided by Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043 (hereinafter: Google).
@@ -99,5 +136,40 @@ including options you can exercise to prevent such use of your data. <br />
 In addition, Google offers an opt-out add-on at <br />
 [https://tools.google.com/dlpage/gaoptout?hl=en](https://tools.google.com/dlpage/gaoptout?hl=en) <br />
 in addition with further information. This add-on can be installed on the most popular browsers and offers you further control over the data that Google collects when you visit our website. The add-on informs Google Analytics' JavaScript (ga.js) that no information about the website visit should be transmitted to Google Analytics. However, this does not prevent information from being transmitted to us or to other web analytics services we may use as detailed herein.
+
+
+### Google Fonts
+Our website uses Google Fonts to display external fonts. This is a service provided by Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043 (hereinafter: Google).
+
+Through certification according to the EU-US Privacy Shield <br />
+[https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active](https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active]) <br />
+Google guarantees that it will follow the EU's data protection regulations when processing data in the United States.
+
+To enable the display of certain fonts on our website, a connection to the Google server in the USA is established whenever our website is accessed.
+
+The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in the optimization and economic operation of our site.
+
+When you access our site, a connection to Google is established from which Google can identify the site from which your request has been sent and to which IP address the fonts are being transmitted for display.
+
+Google offers detailed information at <br />
+[https://adssettings.google.com/authenticated](https://adssettings.google.com/authenticated) <br />
+[https://policies.google.com/privacy](https://policies.google.com/privacy) <br />
+in particular on options for preventing the use of data.
+
+### FontAwesome
+In order to be able to display fonts and visual elements of our website, we use FontAwesome’s external fonts.  FontAwesome is a service of
+
+Fonticons Inc., 6 Porter Road, Apartment 3R, Cambridge, MA 02140, USA, hereinafter referred to as "FontAwesome".
+
+When you access our website, a connection is established to the FontAwesome server in the USA in order to enable and update the display of fonts and visual elements.
+
+The legal basis is Art.  6 para. 1 lit. f) GDPR. Our legitimate interest lies in the optimisation and economic operation of our website.
+
+By connecting to the FontAwesome server when you access our website, FontAwesome can determine from which website your request was sent and to which IP address the font should be sent.
+
+At\
+[https://fontawesome.com/privacy](https://fontawesome.com/privacy)
+\
+FontAwesome offers further information, in particular on the options for preventing data use.
 
 [Model Data Protection Statement](https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html) for [Anwaltskanzlei Weiß & Partner](https://www.ratgeberrecht.eu/)

@@ -167,7 +167,7 @@ when
 then
 	if(Lvl_Black.state instanceof DecimalType && Lvl_Black.state <= 20)
 	{
-		sendMail("ando.hirsch@gmail.com", "Black cartridge nearly empty", "The black cartridge of the printer is nearly empty. Please consider buying a new one.")
+		sendMail("andreas.hirsch@baitando.com", "Black cartridge nearly empty", "The black cartridge of the printer is nearly empty. Please consider buying a new one.")
 	}
 end
 ```

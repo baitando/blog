@@ -2,7 +2,7 @@
 layout: post
 title:  "Using The openHAB Thing Status"
 category: IT
-tags: openhab grafana smart-home monitoring
+tags: openhab smart-home
 bigimg: /img/bigimg_happen.jpg
 credname: Bich Tran
 credurl: https://www.pexels.com/de-de/foto/daten-dokument-graph-hinweis-669986/
