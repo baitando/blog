@@ -11,3 +11,4 @@ bigimg_connected: https://www.pexels.com/de-de/foto/beleuchtet-beleuchtung-besch
 bigimg_printer: https://www.pexels.com/de-de/foto/arbeit-ausrustung-business-drinnen-1440504/
 bigimg_happen: https://www.pexels.com/de-de/foto/daten-dokument-graph-hinweis-669986/
 bigimg_speed: https://www.pexels.com/de-de/foto/abend-autobahn-autos-bewegung-409701/
+bigimg_container_management: https://unsplash.com/photos/kyCNGGKCvyw
