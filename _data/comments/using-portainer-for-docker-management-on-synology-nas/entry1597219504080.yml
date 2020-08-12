@@ -1,0 +1,12 @@
+_id: 87022a70-dc72-11ea-b1ec-ff257b5e1a72
+name: Sam
+message: >-
+  Great post! I have some gaps in knowledge still, though: my DS218+ is on a
+  192.168.1.0/24 subnet and Docker containers running on it get assigned to a
+  bridge interface using the 172.17.0.0/24 subnet. The Portainer container
+  starts up, and 'docker inspect portainer' shows it has an IP address of
+  172.17.0.2, but I'm not able to reach it. A tracert shows destination
+  unreachable from the router. Any advice on what steps I'm missing? I'd guess a
+  static route, but am unsure of the proper way to configure that. Thanks for
+  the help!
+date: 1597219504
