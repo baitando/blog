@@ -1,0 +1,4 @@
+_id: c2f463b0-de69-11ea-8b4e-036874d106d1
+name: André
+message: "Worked perfectly on a Raspberry Pi 4 running Raspbian (buster)\r\n\r\nThe only things I needed to change was:\r\n\r\nsudo cp /home/vagrant/dymo-cups-drivers-1.4.0.5/ppd/lw450.ppd /usr/share/cups/model/\r\nchangend into: \r\nsudo cp ./dymo-cups-drivers-1.4.0.5/ppd/lw450.ppd /usr/share/cups/model/\r\n\r\nand I put a sudo in front of:\r\nlpadmin -p dymo -v usb://DYMO/LabelWriter%20450?serial=01010112345600 -P /usr/share/cups/model/lw450.ppd\r\n\r\nMaybe you can change this post accordingly? I think these changes are also needed for other systems."
+date: 1597435641
