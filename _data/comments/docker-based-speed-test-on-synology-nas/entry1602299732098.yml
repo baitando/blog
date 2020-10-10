@@ -1,0 +1,4 @@
+_id: dae287e0-0aa6-11eb-a51c-716589f5f9f0
+name: Olivier
+message: "Hey,\r\n\r\nGreat post. It was really helpful but I only have access to the CVS.\r\n\r\nCan't get the graph interface to work.\r\n\r\nUsing the local port 8092 and the NAS ip adress but it doesn't work at all.\r\n\r\nI am trying to figure out why my 10gbe network maxes out at around 50mb/s.\r\n\r\nCat6 cable between the NAS and the Mac mini, both equipped with a 10gbe card.\r\n\r\nThe CVS files gives me a transfer rate of around 150 read/write but in real life I get around 50.\r\n\r\nTried many cables...No idea what's up with that.\r\n\r\nAny clues?\r\n\r\nThanks.\r\n\r\nGreat blog post again :)"
+date: 1602299732
