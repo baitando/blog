@@ -1,0 +1,7 @@
+_id: 90fc30f0-25e4-11eb-aee1-478c4303bf6c
+name: Sinitax
+message: >-
+  For arch users there is an AUR package for this called 'dymo-cups-drivers'
+  with extra patches, as the latest libcups is incompatible with the driver
+  source.
+date: 1605294918
