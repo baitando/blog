@@ -1,0 +1,4 @@
+_id: 30426260-3878-11eb-b003-39356fdfcaf3
+name: Roberto
+message: "Hi !!\r\n\r\nI see in my command line this message . Can you help me ?\r\n\r\nlpadmin -p dymo -v usb://DYMO/LabelWriter%20450?serial=01010112345600 -P /usr/share/cups/model/lw450.ppd\r\nlpadmin: Printer drivers are deprecated and will stop working in a future version of CUPS.\r\nlpadmin: No se ha podido abrir el archivo PPD: \"/usr/share/cups/model/lw450.ppd\": No se ha podido abrir el archivo PPD en la línea 0.\r\n\r\nTranslate : It has  can not open the file PPD: \" /usr/share/cups/model/lw450.ppd\"\r\n\r\nThank you"
+date: 1607337442
