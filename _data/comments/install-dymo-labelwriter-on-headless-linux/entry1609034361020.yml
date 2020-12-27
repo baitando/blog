@@ -1,0 +1,14 @@
+_id: 228d11a0-47e7-11eb-87c8-114a43cc37dd
+name: Warwick
+message: >-
+  This worked like a charm, although I do now have a different issue. I setup a
+  LabelWriter 4XL, found the correct driver and copied it in the same way you
+  describe above for the 450. If I look in CUPS, I have it set to use the
+  default 4x6" labels. When I add the printer to Windows 10 it all works
+  fine.... except that the page size only shows A4 & Letter.  It seems to be
+  because those are the only available sizes for the Microsoft IPP Class Driver.
+  It does print, but it's cut off at the top, and any print preview shows it as
+  a full page.  If I change the driver to be the LabelWrite 4XL driver, then I
+  can now select my label size... but of course now nothing prints to the
+  printer. Any ideas?
+date: 1609034361
