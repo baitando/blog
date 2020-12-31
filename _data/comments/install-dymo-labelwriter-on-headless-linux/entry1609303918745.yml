@@ -1,0 +1,4 @@
+_id: bf7a56b0-4a5a-11eb-95d6-6f88c4e660ab
+name: Olivier (the second)
+message: "Hey Andreas, Thanks for your article and thanks to the comment@tors for the 2020 extra info.\r\nSo in LinuxMint 20 I installed the drivers with the terminal and:\r\nsudo apt install printer-driver-dymo\r\n\r\nWhen I send an order out of glabels to the printer, it moves out the label but without any print. So the mecanical function is all ok, but I can't figure out why there is no print.\r\nDoes anyone have a clue about what to do in such situation.\r\nHelp is highly appreciated.\r\nHappy new Year to you All. Greetz"
+date: 1609303918
