@@ -1,2 +1,5 @@
 https://baitando.netlify.com/* https://www.baitando.de/:splat 301!
 https://www.baitando.de/* https://www.baitando.com/:splat 301!
+http://www.baitando.de/* https://www.baitando.com/:splat 301!
+https://baitando.de/* https://www.baitando.com/:splat 301!
+http://baitando.de/* https://www.baitando.com/:splat 301!
