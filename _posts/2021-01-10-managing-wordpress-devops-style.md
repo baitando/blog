@@ -98,6 +98,21 @@ If the website should be secured with HTTP basic authentication, a proper `.htpa
 
 In the scripts provided in the [sample repository][github-samples], the initialization is triggered with the `./baitando init <env>` command.
 
+# Export
+The export takes care to dump the database and to copy all the data files of the website.
+The result is then downloaded to the computer, which runs the script.
+
+This can either be used for backups, or for cloning environments.
+
+In the scripts provided in the [sample repository][github-samples], the export is triggered with the `./baitando export <env>` command.
+
+# Import
+The import takes care to import a database dump and to replace the data files with the data files of an export.
+
+This can either be used to restore an environment, or for cloning environments.
+
+In the scripts provided in the [sample repository][github-samples], the export is triggered with the `./baitando import <env>` command.
+
 # Local Environment
 In addition to the previously explained operations, there is the part of creating and using a local, Docker-based version of the website for development purposes.
 
