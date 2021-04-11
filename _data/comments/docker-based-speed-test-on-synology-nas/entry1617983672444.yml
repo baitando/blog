@@ -1,0 +1,9 @@
+_id: dfd44700-994b-11eb-a14f-8925431ea595
+name: Florian
+message: >-
+  Great tutorial, thank! Got it running for about a year or so until recently
+  the test results are not written to the results.csv anymore. Any clue? Tried
+  removing the whole container and re-installed it, including deletion of all
+  the (old/previous) folders, no luck. Still getting access to the web
+  interface, but no data is displayed...
+date: 1617983672
