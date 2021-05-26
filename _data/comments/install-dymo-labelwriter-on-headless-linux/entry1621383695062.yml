@@ -1,0 +1,4 @@
+_id: 2b3bf0c0-b838-11eb-b511-4b100704cb26
+name: John
+message: "I used dietpi to simplify the setup for Cups on a raspberry pi W but it works for many other single board computers. All I had to do after installing through Diepi is `sudo apt-get install printer-driver-dymo`\r\n\r\n https://dietpi.com\r\n\r\nEverything works as expected testing locally via `lp -d dymo test.txt` Windows 10 seems to recognize and install the printer. However getting `DYMO Connect` to successfully print is another matter. It seems like a job is never received by Cups."
+date: 1621383695
