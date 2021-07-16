@@ -6,8 +6,8 @@ source 'https://rubygems.org'
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'jekyll-paginate'
 gem 'tzinfo-data', platforms: [:x64_mingw, :mingw, :mswin]
-
-gem "jekyll", "= 4.0"
+gem "webrick"
+gem "jekyll", "= 4.2.0"
 gem "html-proofer"
 gem 'jekyll-sitemap'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
