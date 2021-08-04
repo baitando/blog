@@ -1,0 +1,4 @@
+_id: 7050fcf0-f393-11eb-b1ce-491e656c5f84
+name: Danyo
+message: "Hi,\r\n\r\ndank für den Artikel. War hilfreich.\r\nEine Sache: beim Script zum updaten des openhap controls lieber postUpdate verwenden, statt sendCommand. Dann umgeht man einen evtl. Loop\r\n\r\nControl_Mode_openHAB.postUpdate(Control_Mode_CCU2.state.toString)\r\n\r\nDann wird nur in der Oberfläche (UI und Sitemap) das Control angepasst und sendet nicht erneut einen Command an openhab\r\n\r\nSchöne Grüße\r\nDanyo"
+date: 1627910013
