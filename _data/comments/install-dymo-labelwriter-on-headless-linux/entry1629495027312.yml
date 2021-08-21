@@ -1,0 +1,19 @@
+_id: d5ffaf60-01fd-11ec-84a7-6d81d642770a
+name: Darrell Styner
+message: >-
+  There are recent comments here so I'll point out that, at least under Ubuntu
+  14.04 through 20.04, the separate step to fetch and extract the PPD files is
+  not necessary. They're installed in compressed form by the apt install of
+  printer-driver-dymo. Do a "lpinfo -m | grep dymo" and you'll get a list of
+  Dymo drivers available. They'll have names like
+  "dymo:0/cups/model/lw450tt.ppd". Specify all of that with the -m option when
+  adding the printer and the PPD will be extracted and installed without needing
+  to fetch files directly from Dymo. I wasn't able to find them on Dymo's site,
+  so was happy to find them in the printer-driver-dymo package from Ubuntu. The
+  rest of the install worked well for me and I was able to print nicely
+  formatted, rotated, and sized labels from a test.txt file with: "lp -d lw450
+  -o media=w79h252 -o orientation-requested=4 -o cpi=13 -o page-left=12 -o
+  page-top=12 test.txt". "lw450" is obviously the name of my printer. This
+  worked for me under Ubuntu 14.04.5 and 20.04. I assume it works for all
+  versions in between.
+date: 1629495027
