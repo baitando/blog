@@ -9,7 +9,7 @@ permalink: legal-disclosure
 ## Information in accordance with section 5 TMG
 
 Andreas Hirsch  
-Olnhauser Str. 12  
+Olnhauser Str. 14  
 70437 Stuttgart   
 Germany
 
