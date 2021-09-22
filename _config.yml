@@ -7,6 +7,8 @@ baseurl: ""
 # Name of website
 title: Just Another IT Blog
 
+future: true
+
 # Short description of your site
 description: This is a collection of personal notes shared with everybody
 
