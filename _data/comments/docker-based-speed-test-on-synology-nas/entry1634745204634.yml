@@ -1,0 +1,4 @@
+_id: db8c55b0-31bd-11ec-aad7-9fce083e5912
+name: Big joe
+message: "Installed and configured the container.\r\nNo graph displayed, but a csv is generated on the shared folder.\r\nTried playing with time ranges but no luck."
+date: 1634745204
