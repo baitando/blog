@@ -1,0 +1,12 @@
+_id: 96ade070-78a4-11ec-9712-fbc8b67b1f39
+name: Alon
+message: >-
+  I have the same issue as 'Warwick'  (he posted December 2020). I can get it
+  all setup any have my Dymo 4XL be network connected. The default setting on
+  the pi (3B+ running Ubuntu) is the 4x6 shipping albels. When I connect to the
+  networked printer on Windows, the only available paper option is business card
+  2x 3 5, using the IPP class driver. Nothing else. I can print, but it uses
+  that paper format.  Change the print driver from IPP to the 4XL makes the
+  paper options become available, but of course that won't work for printing.
+  Anyone have an idea on how to resolve?
+date: 1642540884
