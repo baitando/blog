@@ -1,0 +1,4 @@
+_id: 978d59b0-bf1e-11ec-a487-9d769e2e79c7
+name: '@mr_anon'
+message: "@Alon\r\n1. Change the \"Make\" to Raw in CUPS so the driver is not used.\r\n2. In windows goto Control Panel\\All Control Panel Items\\Devices and Printers.\r\n3. Click \"Add Printer\"\r\n4. Choose \"Select a shared printer by name\".\r\n4. Insert the CUPS URL for your printer for example... http://192.168.1.100:631/printers/dymolabel"
+date: 1650289865
